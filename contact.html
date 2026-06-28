@@ -17,13 +17,15 @@
   .topbar-item { font-size: 11px; color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color .2s; }
   .topbar-item:hover { color: var(--pink); }
   .topbar-item span { color: var(--gold-lt); }
+  .topbar-booking a { color: var(--gold-lt); text-decoration: none; font-weight: 600; }
+  .topbar-booking a:hover { color: var(--pink); }
 
-  nav { background: var(--pink); border-bottom: 1px solid rgba(201,138,26,.2); padding: 0 72px; display: flex; align-items: center; justify-content: space-between; height: 80px; position: sticky; top: 0; z-index: 100; }
+  nav { background: var(--pink); border-bottom: 1px solid rgba(201,138,26,.2); padding: 0 72px; display: flex; align-items: center; justify-content: space-between; height: 80px; position: sticky; top: 0; z-index: 100; overflow: hidden; }
   .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); }
   .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
   .nav-links a { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--black); text-decoration: none; transition: color .2s; }
   .nav-links a:hover { color: var(--gold); }
-  .nav-logo img { height: 70px; width: auto; display: block; mix-blend-mode: multiply; filter: brightness(1); }
+  .nav-logo img { height: 80px; width: auto; display: block; object-fit: contain; }
   .nav-cta { background: var(--black) !important; color: var(--white) !important; padding: 10px 24px; border-radius: 2px; font-size: 11px !important; font-weight: 700 !important; letter-spacing: .1em !important; text-transform: uppercase; text-decoration: none; transition: all .22s !important; white-space: nowrap; }
   .nav-cta:hover { background: var(--gold-lt) !important; }
 
@@ -95,9 +97,9 @@
   .footer-link { font-size: 16px; color: var(--white); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color .2s; }
   .footer-link:hover { color: var(--pink); }
   .footer-link .icon { color: var(--gold-lt); width: 18px; }
-  /* Footer service buttons - gold outline, pink hover */
-  .footer-service-btns { display: flex; flex-direction: column; gap: 10px; }
-  .footer-service-btn { background: transparent; color: var(--gold); border: 1px solid var(--gold); padding: 8px 14px; border-radius: 2px; font-size: 14px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; text-align: left; transition: all .25s; display: block; }
+  /* Footer service buttons - gold outline, pink hover, small and centered */
+  .footer-service-btns { display: flex; flex-direction: column; gap: 8px; }
+  .footer-service-btn { background: transparent; color: var(--gold); border: 1px solid var(--gold); padding: 6px 10px; border-radius: 2px; font-size: 14px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; text-decoration: none; text-align: center; transition: all .25s; display: block; }
   .footer-service-btn:hover { background: var(--pink); border-color: var(--pink); color: var(--black); }
   .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   .footer-copy { font-size: 14px; color: var(--white); }
@@ -117,7 +119,7 @@
 
 <div class="topbar">
   <a href="tel:3073910650" class="topbar-item"><span>📞</span> 307-391-0650</a>
-  <div class="topbar-booking"><b>Now Booking</b> Wyoming & Beyond</div>
+  <a href="contact.html" class="topbar-booking" style="text-decoration:none;"><b>Now Booking</b> Wyoming & Beyond</a>
   <a href="mailto:gracie@gsmediaempirellc.com" class="topbar-item"><span>✉</span> gracie@gsmediaempirellc.com</a>
 </div>
 
@@ -162,6 +164,9 @@
       <a href="https://www.instagram.com/gsmediaempirellc?igsh=MXJ0bzljYjRpOWJjaA==" target="_blank" class="social-btn"><img src="INSTA LOGO.jpeg" style="width:20px;height:20px;border-radius:4px;"> Instagram</a>
       <a href="https://www.facebook.com/profile.php?id=61584386363200" target="_blank" class="social-btn"><img src="FB LOGO.png" style="width:20px;height:20px;border-radius:50%;"> Facebook</a>
     </div>
+    <div style="margin-top:36px;padding-top:36px;border-top:1px solid rgba(201,138,26,.15);">
+      <p style="font-family:'DM Serif Display',serif;font-size:clamp(24px,3vw,38px);font-weight:400;line-height:1.15;color:var(--black);">We Turn Clicks Into<br><em style="font-style:italic;color:var(--gold);">Loyal Customers.</em></p>
+    </div>
   </div>
 
   <div class="contact-form">
@@ -191,12 +196,6 @@
     <div class="form-group"><label>Tell Me About Your Business & Goals</label><textarea placeholder="Tell me about your business what you are looking for and what you hope to achieve..."></textarea></div>
     <button class="form-submit">Send Message</button>
   </div>
-</section>
-
-<!-- TAGLINE SECTION - directly under hero -->
-<section class="tagline-section">
-  <h2>We Turn Clicks Into<br><em>Loyal Customers.</em></h2>
-  <a href="#form" class="btn-pink">Let's Get Started</a>
 </section>
 
 <!-- FAQ -->
