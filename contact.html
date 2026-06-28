@@ -19,11 +19,11 @@
   .topbar-item span { color: var(--gold-lt); }
 
   nav { background: var(--pink); border-bottom: 1px solid rgba(201,138,26,.2); padding: 0 72px; display: flex; align-items: center; justify-content: space-between; height: 80px; position: sticky; top: 0; z-index: 100; }
-  .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); background: var(--pink); padding: 4px; border-radius: 4px; }
+  .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); }
   .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
   .nav-links a { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--black); text-decoration: none; transition: color .2s; }
   .nav-links a:hover { color: var(--gold); }
-  .nav-logo img { height: 70px; width: auto; display: block; }
+  .nav-logo img { height: 70px; width: auto; display: block; mix-blend-mode: multiply; filter: brightness(1); }
   .nav-cta { background: var(--black) !important; color: var(--white) !important; padding: 10px 24px; border-radius: 2px; font-size: 11px !important; font-weight: 700 !important; letter-spacing: .1em !important; text-transform: uppercase; text-decoration: none; transition: all .22s !important; white-space: nowrap; }
   .nav-cta:hover { background: var(--gold-lt) !important; }
 
@@ -97,7 +97,7 @@
   .footer-link .icon { color: var(--gold-lt); width: 18px; }
   /* Footer service buttons - gold outline, pink hover */
   .footer-service-btns { display: flex; flex-direction: column; gap: 10px; }
-  .footer-service-btn { background: transparent; color: var(--gold); border: 1px solid var(--gold); padding: 12px 20px; border-radius: 2px; font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; text-align: center; transition: all .25s; display: block; }
+  .footer-service-btn { background: transparent; color: var(--gold); border: 1px solid var(--gold); padding: 8px 14px; border-radius: 2px; font-size: 14px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; text-align: left; transition: all .25s; display: block; }
   .footer-service-btn:hover { background: var(--pink); border-color: var(--pink); color: var(--black); }
   .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   .footer-copy { font-size: 14px; color: var(--white); }
