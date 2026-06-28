@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google & Business Setup — GS Media Empire LLC</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { --pink: #FFCbec; --gold: #C98A1A; --gold-lt: #E1A02B; --black: #000000; --white: #FFFFFF; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--white); color: var(--black); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
+
+  .topbar { background: var(--black); padding: 10px 72px; display: flex; align-items: center; justify-content: space-between; }
+  .topbar-booking { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: #fff; }
+  .topbar-booking b { color: var(--gold-lt); }
+  .topbar-item { font-size: 11px; color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color .2s; }
+  .topbar-item:hover { color: var(--pink); }
+  .topbar-item span { color: var(--gold-lt); }
+
+  nav { background: var(--pink); border-bottom: 1px solid rgba(201,138,26,.2); padding: 0 72px; display: flex; align-items: center; justify-content: space-between; height: 80px; position: sticky; top: 0; z-index: 100; }
+  .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); }
+  .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+  .nav-links a { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--black); text-decoration: none; transition: color .2s; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-logo img { height: 70px; width: auto; }
+  .nav-cta { background: var(--black) !important; color: var(--white) !important; padding: 10px 24px; border-radius: 2px; font-size: 11px !important; font-weight: 700 !important; letter-spacing: .1em !important; text-transform: uppercase; text-decoration: none; transition: all .22s !important; white-space: nowrap; }
+  .nav-cta:hover { background: var(--gold-lt) !important; }
+
+  .section-label { font-size: 10px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+  .section-heading { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 4vw, 56px); font-weight: 400; line-height: 1.08; margin-bottom: 20px; }
+  .section-heading em { font-style: italic; color: var(--gold); }
+  .btn-gold { background: var(--gold); color: var(--white); padding: 15px 36px; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: all .25s; }
+  .btn-gold:hover { background: var(--pink); color: var(--black); transform: translateY(-2px); }
+
+  /* HERO - white */
+  .hero { padding: 100px 72px 80px; background: var(--white); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(48px, 5.5vw, 80px); font-weight: 400; line-height: 1.04; color: var(--black); margin-bottom: 24px; }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero p { font-size: 16px; line-height: 1.8; color: var(--black); font-weight: 300; margin-bottom: 40px; max-width: 480px; }
+  .hero-boxes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .hero-box { padding: 36px 28px; border: 1px solid rgba(201,138,26,.25); border-radius: 2px; display: flex; flex-direction: column; gap: 12px; transition: all .3s; text-decoration: none; color: var(--black); }
+  .hero-box:hover { background: var(--pink); border-color: var(--pink); }
+  .hero-box-icon { font-size: 32px; }
+  .hero-box-title { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--black); }
+  .hero-box-desc { font-size: 13px; font-weight: 300; line-height: 1.6; color: var(--black); }
+
+  /* SERVICES - light */
+  .services { padding: 100px 72px; background: #f9f9f9; }
+  .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: rgba(201,138,26,.1); margin-top: 56px; }
+  .service-item { background: var(--white); padding: 40px 32px; border-bottom: 3px solid transparent; transition: all .3s; }
+  .service-item:hover { border-color: var(--pink); background: #fff5fb; }
+  .service-icon { font-size: 28px; margin-bottom: 16px; }
+  .service-title { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 12px; }
+  .service-desc { font-size: 14px; font-weight: 300; line-height: 1.75; }
+
+  /* WHY - black */
+  .why { padding: 100px 72px; background: var(--black); }
+  .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: rgba(255,255,255,.06); margin-top: 56px; }
+  .why-item { background: var(--black); padding: 48px 36px; border-top: 3px solid transparent; transition: border-color .3s; }
+  .why-item:hover { border-color: var(--pink); }
+  .why-icon { font-size: 36px; margin-bottom: 20px; }
+  .why-title { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--white); margin-bottom: 12px; }
+  .why-desc { font-size: 14px; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,.75); }
+
+  /* CONTACT - black */
+  .contact { padding: 100px 72px; background: var(--black); border-top: 1px solid rgba(255,255,255,.07); display: grid; grid-template-columns: 1fr 1.2fr; gap: 100px; align-items: start; }
+  .contact-item { display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--white); font-weight: 500; text-decoration: none; transition: color .2s; }
+  .contact-item:hover { color: var(--pink); }
+  .contact-item .icon { color: var(--gold-lt); }
+  .contact-detail { display: flex; flex-direction: column; gap: 12px; }
+  .contact-form { display: flex; flex-direction: column; gap: 18px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-group label { font-family: 'Playfair Display', serif; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--white); }
+  .form-group input, .form-group select, .form-group textarea { background: rgba(255,255,255,.06); border: 1px solid rgba(255,203,236,.2); border-radius: 2px; padding: 14px 18px; font-size: 14px; font-family: 'DM Sans', sans-serif; color: var(--white); outline: none; transition: border-color .2s; width: 100%; }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,.3); }
+  .form-group select option { background: #000; color: var(--white); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold-lt); }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .form-submit { background: var(--gold-lt); color: var(--black); padding: 16px 40px; border-radius: 2px; font-family: 'Playfair Display', serif; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; border: none; cursor: pointer; align-self: flex-start; transition: all .25s; }
+  .form-submit:hover { background: var(--pink); transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer { background: var(--black); border-top: 1px solid rgba(255,255,255,.07); padding: 60px 72px 36px; display: flex; flex-direction: column; gap: 40px; }
+  .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 60px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.07); }
+  .footer-logo-img { height: 80px; width: auto; margin-bottom: 12px; display: block; }
+  .footer-tagline { font-size: 13px; color: var(--white); font-weight: 300; line-height: 1.7; max-width: 260px; }
+  .footer-col-title { font-family: 'Playfair Display', serif; font-size: 12px; font-weight: 700; color: var(--white); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; }
+  .footer-list { display: flex; flex-direction: column; gap: 12px; }
+  .footer-link { font-size: 13px; color: var(--white); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color .2s; }
+  .footer-link:hover { color: var(--pink); }
+  .footer-link .icon { color: var(--gold-lt); width: 18px; }
+  .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-copy { font-size: 12px; color: var(--white); }
+
+  @media (max-width: 900px) {
+    .topbar, nav, .hero, .services, .why, .contact, footer { padding-left: 24px; padding-right: 24px; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; padding-top: 72px; }
+    .hero-boxes { grid-template-columns: 1fr 1fr; }
+    .services-grid, .why-grid { grid-template-columns: 1fr; }
+    .contact { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="tel:3073910650" class="topbar-item"><span>📞</span> 307-391-0650</a>
+  <div class="topbar-booking"><b>Now Booking</b> Wyoming & Beyond</div>
+  <a href="mailto:gracie@gsmediaempirellc.com" class="topbar-item"><span>✉</span> gracie@gsmediaempirellc.com</a>
+</div>
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#faq">FAQs</a></li>
+  </ul>
+  <a href="index.html" class="nav-logo">
+    <img src="LARGE GS MEDIA EMPIRE LLC LOGO.PNG" alt="GS Media Empire LLC">
+  </a>
+  <ul class="nav-links">
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Let's Work Together</a></li>
+  </ul>
+</nav>
+
+<!-- HERO - WHITE -->
+<section class="hero">
+  <div>
+    <div class="section-label">Our Services</div>
+    <h1>Get Your Business<br><em>Found Online.</em></h1>
+    <p>From setting up your professional email to optimizing your Google Business Profile we handle all the behind the scenes tech so your business shows up when customers are searching for you.</p>
+    <a href="#contact" class="btn-gold">Get Set Up Today</a>
+  </div>
+  <div class="hero-boxes">
+    <a href="#contact" class="hero-box">
+      <div class="hero-box-icon">📧</div>
+      <div class="hero-box-title">Email Setup</div>
+      <div class="hero-box-desc">Professional branded email that looks the part</div>
+    </a>
+    <a href="#contact" class="hero-box">
+      <div class="hero-box-icon">📍</div>
+      <div class="hero-box-title">Google Business</div>
+      <div class="hero-box-desc">Get found by local customers searching for you</div>
+    </a>
+    <a href="#contact" class="hero-box">
+      <div class="hero-box-icon">🔧</div>
+      <div class="hero-box-title">Google Workspace</div>
+      <div class="hero-box-desc">Drive Calendar Meet and more all set up for you</div>
+    </a>
+    <a href="#contact" class="hero-box">
+      <div class="hero-box-icon">🔍</div>
+      <div class="hero-box-title">Local SEO</div>
+      <div class="hero-box-desc">Optimized so the right people can find you</div>
+    </a>
+  </div>
+</section>
+
+<!-- SERVICES - LIGHT -->
+<section class="services">
+  <div class="section-label">What's Included</div>
+  <h2 class="section-heading">Everything Your Business<br><em>Needs to Get Found.</em></h2>
+  <div class="services-grid">
+    <div class="service-item">
+      <div class="service-icon">📧</div>
+      <div class="service-title">Professional Email Setup</div>
+      <div class="service-desc">Say goodbye to gmail.com addresses. We set up your professional branded email like gracie@yourbusiness.com so you look legit from day one.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">🔧</div>
+      <div class="service-title">Google Workspace Setup</div>
+      <div class="service-desc">Full setup of Google Workspace including Gmail Drive Docs Sheets Calendar and Meet so your whole team can collaborate in one place.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">📍</div>
+      <div class="service-title">Google Business Profile</div>
+      <div class="service-desc">We create and fully optimize your Google Business Profile so your business shows up in local searches and on Google Maps with the right info photos and reviews.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">🔍</div>
+      <div class="service-title">Local SEO Optimization</div>
+      <div class="service-desc">We optimize your online presence so customers searching for what you offer in your area can actually find you instead of your competitors.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">⭐</div>
+      <div class="service-title">Review Management</div>
+      <div class="service-desc">We help you set up a system to collect more Google reviews and respond to them professionally to build trust with new customers.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">📊</div>
+      <div class="service-title">Ongoing Profile Management</div>
+      <div class="service-desc">Keep your Google Business Profile fresh and up to date with new photos posts hours and any changes to your business information.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IT MATTERS - BLACK -->
+<section class="why">
+  <div class="section-label" style="color:var(--gold-lt);">Why It Matters</div>
+  <h2 class="section-heading" style="color:var(--white);">Your Customers Are <em style="color:var(--pink);">Already Searching.</em></h2>
+  <p style="font-size:16px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.8);max-width:600px;margin-top:8px;margin-bottom:56px;">If your business is not showing up on Google you are losing customers to competitors every single day. We make sure that when someone searches for what you offer you are the one they find.</p>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-icon">🗺️</div>
+      <div class="why-title">Show Up on Google Maps</div>
+      <div class="why-desc">Local customers searching for businesses near them will be able to find you with directions hours and contact info right at their fingertips.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">💼</div>
+      <div class="why-title">Look Professional</div>
+      <div class="why-desc">A branded email and complete Google profile instantly makes your business look more credible and trustworthy to potential customers.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">📈</div>
+      <div class="why-title">Grow Organically</div>
+      <div class="why-desc">Good local SEO means more people finding you without paying for ads. It is one of the best long term investments you can make for your business.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT - BLACK -->
+<section class="contact" id="contact">
+  <div>
+    <div class="section-label" style="color:var(--gold-lt);">Get Started</div>
+    <h2 class="section-heading" style="color:var(--white);">Let's Get Your Business <em style="color:var(--pink);">Set Up Right.</em></h2>
+    <p style="font-size:15px;color:rgba(255,255,255,.8);font-weight:300;line-height:1.8;margin-top:12px;margin-bottom:32px;">Fill out the form and I will get back to you to create a custom package for you.</p>
+    <div class="contact-detail">
+      <a href="tel:3073910650" class="contact-item"><span class="icon">📞</span> 307-391-0650</a>
+      <a href="mailto:gracie@gsmediaempirellc.com" class="contact-item"><span class="icon">✉</span> gracie@gsmediaempirellc.com</a>
+    </div>
+  </div>
+  <div class="contact-form">
+    <div class="form-row">
+      <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane"></div>
+      <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+    </div>
+    <div class="form-group"><label>Email Address</label><input type="email" placeholder="jane@yourbusiness.com"></div>
+    <div class="form-group"><label>Business Name</label><input type="text" placeholder="Your Business LLC"></div>
+    <div class="form-group">
+      <label>What Do You Need?</label>
+      <select>
+        <option value="">Select an option...</option>
+        <option>Professional Email Setup</option>
+        <option>Google Workspace Setup</option>
+        <option>Google Business Profile</option>
+        <option>Local SEO Optimization</option>
+        <option>Review Management</option>
+        <option>Ongoing Profile Management</option>
+        <option>Full Setup Package</option>
+      </select>
+    </div>
+    <div class="form-group"><label>Tell Me About Your Business</label><textarea placeholder="Tell me about your business what you currently have set up and what you need help with..."></textarea></div>
+    <button class="form-submit">Send Message</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-list">
+        <a href="tel:3073910650" class="footer-link"><span class="icon">📞</span> 307-391-0650</a>
+        <a href="mailto:gracie@gsmediaempirellc.com" class="footer-link"><span class="icon">✉</span> gracie@gsmediaempirellc.com</a>
+        <span class="footer-link"><span class="icon">📍</span> Wyoming & Beyond</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+      <a href="index.html">
+        <img src="LARGE GS MEDIA EMPIRE LLC LOGO.PNG" alt="GS Media Empire LLC" class="footer-logo-img">
+      </a>
+      <div class="footer-tagline" style="text-align:center;margin-top:16px;">We turn clicks into loyal customers.<br>Wyoming-based, serving businesses everywhere.</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Our Socials</div>
+      <div class="footer-list">
+        <a href="https://www.instagram.com/gsmediaempirellc?igsh=MXJ0bzljYjRpOWJjaA==" target="_blank" class="footer-link"><img src="INSTA LOGO.jpeg" style="width:18px;height:18px;border-radius:4px;"> @gsmediaempirellc</a>
+        <a href="https://www.facebook.com/profile.php?id=61584386363200" target="_blank" class="footer-link"><img src="FB LOGO.png" style="width:18px;height:18px;border-radius:50%;"> GS Media Empire LLC</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 GS Media Empire LLC All Rights Reserved.</div>
+    <div class="footer-copy">Designed & Built by GS Media Empire LLC</div>
+  </div>
+</footer>
+
+</body>
+</html>
