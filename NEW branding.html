@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Branding & Identity — GS Media Empire LLC</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { --pink: #FFCbec; --gold: #C98A1A; --gold-lt: #E1A02B; --black: #000000; --white: #FFFFFF; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--white); color: var(--black); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
+
+  .topbar { background: var(--black); padding: 10px 72px; display: flex; align-items: center; justify-content: space-between; }
+  .topbar-booking { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: #fff; }
+  .topbar-booking b { color: var(--gold-lt); }
+  .topbar-item { font-size: 11px; color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color .2s; }
+  .topbar-item:hover { color: var(--pink); }
+  .topbar-item span { color: var(--gold-lt); }
+
+  nav { background: var(--pink); border-bottom: 1px solid rgba(201,138,26,.2); padding: 0 72px; display: flex; align-items: center; justify-content: space-between; height: 80px; position: sticky; top: 0; z-index: 100; }
+  .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); }
+  .nav-logo img { height: 70px; width: auto; }
+  .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+  .nav-links a { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--black); text-decoration: none; transition: color .2s; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta { background: var(--black) !important; color: var(--white) !important; padding: 10px 24px; border-radius: 2px; font-size: 11px !important; font-weight: 700 !important; letter-spacing: .1em !important; text-transform: uppercase; text-decoration: none; transition: all .22s !important; white-space: nowrap; }
+  .nav-cta:hover { background: var(--gold-lt) !important; }
+
+  .section-label { font-size: 10px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+  .section-heading { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 4vw, 56px); font-weight: 400; line-height: 1.08; margin-bottom: 20px; }
+  .section-heading em { font-style: italic; color: var(--gold); }
+  .btn-gold { background: var(--gold); color: var(--white); padding: 15px 36px; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: all .25s; }
+  .btn-gold:hover { background: var(--pink); color: var(--black); transform: translateY(-2px); }
+  .btn-pink { background: var(--pink); color: var(--black); padding: 15px 36px; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: all .25s; }
+  .btn-pink:hover { background: var(--gold-lt); color: var(--white); transform: translateY(-2px); }
+
+  /* HERO - clean white */
+  .hero { padding: 100px 72px 80px; background: var(--white); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(48px, 5.5vw, 80px); font-weight: 400; line-height: 1.04; color: var(--black); margin-bottom: 24px; }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero p { font-size: 16px; line-height: 1.8; color: var(--black); font-weight: 300; margin-bottom: 40px; max-width: 480px; }
+  .hero-boxes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .hero-box { aspect-ratio: 1; border: 1px solid rgba(201,138,26,.25); border-radius: 2px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; padding: 24px; text-align: center; transition: all .3s; cursor: pointer; text-decoration: none; color: var(--black); }
+  .hero-box:hover { background: var(--pink); border-color: var(--pink); }
+  .hero-box-icon { font-size: 32px; }
+  .hero-box-label { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--black); }
+
+  /* SERVICES - light gray */
+  .services { padding: 100px 72px; background: #f9f9f9; }
+  .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: rgba(201,138,26,.1); margin-top: 56px; }
+  .service-item { background: var(--white); padding: 40px 32px; border-bottom: 3px solid transparent; transition: all .3s; }
+  .service-item:hover { border-color: var(--pink); background: #fff5fb; }
+  .service-icon { font-size: 28px; margin-bottom: 16px; }
+  .service-title { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 12px; }
+  .service-desc { font-size: 14px; font-weight: 300; line-height: 1.75; }
+
+  /* WHY - BLACK section, shows up after services */
+  .why { padding: 100px 72px; background: var(--black); display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
+  .why-list { display: flex; flex-direction: column; }
+  .why-item { display: grid; grid-template-columns: 48px 1fr; gap: 20px; padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,.08); align-items: start; }
+  .why-item:first-child { border-top: 1px solid rgba(255,255,255,.08); }
+  .why-num { font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--pink); line-height: 1; }
+  .why-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; color: var(--white); }
+  .why-desc { font-size: 14px; font-weight: 300; line-height: 1.65; color: rgba(255,255,255,.75); }
+
+  /* PORTFOLIO - white */
+  .portfolio { padding: 100px 72px; background: var(--white); }
+  .portfolio-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 56px; }
+  .portfolio-placeholder { aspect-ratio: 1; background: #f5f5f5; border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #999; text-align: center; padding: 24px; border: 1px dashed rgba(201,138,26,.2); font-weight: 300; line-height: 1.6; }
+
+  /* CONTACT - black */
+  .contact { padding: 100px 72px; background: var(--black); display: grid; grid-template-columns: 1fr 1.2fr; gap: 100px; align-items: start; }
+  .contact-item { display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--white); font-weight: 500; text-decoration: none; transition: color .2s; }
+  .contact-item:hover { color: var(--pink); }
+  .contact-item .icon { color: var(--gold-lt); }
+  .contact-detail { display: flex; flex-direction: column; gap: 12px; }
+  .contact-form { display: flex; flex-direction: column; gap: 18px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-group label { font-family: 'Playfair Display', serif; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--white); }
+  .form-group input, .form-group select, .form-group textarea { background: rgba(255,255,255,.06); border: 1px solid rgba(255,203,236,.2); border-radius: 2px; padding: 14px 18px; font-size: 14px; font-family: 'DM Sans', sans-serif; color: var(--white); outline: none; transition: border-color .2s; width: 100%; }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,.3); }
+  .form-group select option { background: #000; color: var(--white); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold-lt); }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .form-submit { background: var(--gold-lt); color: var(--black); padding: 16px 40px; border-radius: 2px; font-family: 'Playfair Display', serif; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; border: none; cursor: pointer; align-self: flex-start; transition: all .25s; }
+  .form-submit:hover { background: var(--pink); transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer { background: var(--black); border-top: 1px solid rgba(255,255,255,.07); padding: 60px 72px 36px; display: flex; flex-direction: column; gap: 40px; }
+  .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 60px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.07); }
+  .footer-logo-img { height: 80px; width: auto; margin-bottom: 12px; display: block; }
+  .footer-tagline { font-size: 13px; color: var(--white); font-weight: 300; line-height: 1.7; max-width: 260px; }
+  .footer-col-title { font-family: 'Playfair Display', serif; font-size: 12px; font-weight: 700; color: var(--white); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; }
+  .footer-list { display: flex; flex-direction: column; gap: 12px; }
+  .footer-link { font-size: 13px; color: var(--white); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color .2s; }
+  .footer-link:hover { color: var(--pink); }
+  .footer-link .icon { color: var(--gold-lt); width: 18px; }
+  .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-copy { font-size: 12px; color: var(--white); }
+
+  @media (max-width: 900px) {
+    .topbar, nav, .hero, .services, .why, .portfolio, .contact, footer { padding-left: 24px; padding-right: 24px; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; padding-top: 72px; }
+    .hero-boxes { grid-template-columns: 1fr 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .why { grid-template-columns: 1fr; }
+    .portfolio-grid { grid-template-columns: 1fr 1fr; }
+    .contact { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="tel:3073910650" class="topbar-item"><span>📞</span> 307-391-0650</a>
+  <div class="topbar-booking"><b>Now Booking</b> Wyoming & Beyond</div>
+  <a href="mailto:gracie@gsmediaempirellc.com" class="topbar-item"><span>✉</span> gracie@gsmediaempirellc.com</a>
+</div>
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#faq">FAQs</a></li>
+  </ul>
+  <a href="index.html" class="nav-logo">
+    <img src="images/LARGE_GS_MEDIA_EMPIRE_LLC_LOGO.PNG" alt="GS Media Empire LLC">
+  </a>
+  <ul class="nav-links">
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Let's Work Together</a></li>
+  </ul>
+</nav>
+
+<!-- HERO - WHITE -->
+<section class="hero">
+  <div>
+    <div class="section-label">Our Services</div>
+    <h1>A Brand That Makes<br>People <em>Remember You.</em></h1>
+    <p>Your brand is more than a logo. It is the feeling people get when they find you online. We build brands that are consistent recognizable and impossible to forget.</p>
+    <a href="#contact" class="btn-gold">Start Your Brand</a>
+  </div>
+  <div class="hero-boxes">
+    <a href="#contact" class="hero-box"><div class="hero-box-icon">🎨</div><div class="hero-box-label">Logo Design</div></a>
+    <a href="#contact" class="hero-box"><div class="hero-box-icon">📋</div><div class="hero-box-label">Brand Kits</div></a>
+    <a href="#contact" class="hero-box"><div class="hero-box-icon">🖌️</div><div class="hero-box-label">Color Palettes</div></a>
+    <a href="#contact" class="hero-box"><div class="hero-box-icon">📱</div><div class="hero-box-label">Social Templates</div></a>
+  </div>
+</section>
+
+<!-- SERVICES - LIGHT -->
+<section class="services">
+  <div class="section-label">What's Included</div>
+  <h2 class="section-heading">Everything Your Brand<br><em>Needs to Shine.</em></h2>
+  <div class="services-grid">
+    <div class="service-item">
+      <div class="service-icon">🎨</div>
+      <div class="service-title">Logo Design</div>
+      <div class="service-desc">A professional logo that captures your brand personality and looks great everywhere from your website to your business cards to your social profiles.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">📋</div>
+      <div class="service-title">Brand Kits & Guidelines</div>
+      <div class="service-desc">A complete brand kit with everything you need to stay consistent including your logo variations fonts colors and rules for how to use them.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">🖌️</div>
+      <div class="service-title">Color Palettes & Typography</div>
+      <div class="service-desc">The right colors and fonts make your brand instantly recognizable. We build a palette and type system that feels completely like you.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">📱</div>
+      <div class="service-title">Social Media Templates</div>
+      <div class="service-desc">Done for you Canva templates for posts stories and reels so your social media always looks on brand even when you are posting yourself.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">🖨️</div>
+      <div class="service-title">Business Cards & Print</div>
+      <div class="service-desc">Business cards flyers menus and any other print materials designed to match your brand and make a great first impression.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">✨</div>
+      <div class="service-title">Full Brand Refresh</div>
+      <div class="service-desc">Already have a brand but it feels outdated? We will revamp your entire look and feel while keeping what makes your business recognizable.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY BRANDING - BLACK -->
+<section class="why">
+  <div>
+    <div class="section-label" style="color:var(--gold-lt);">Why It Matters</div>
+    <h2 class="section-heading" style="color:var(--white);">Your Brand is Your<br>First <em style="color:var(--pink);">Impression.</em></h2>
+    <p style="font-size:16px;font-weight:300;line-height:1.8;margin-top:16px;color:rgba(255,255,255,.8);">People decide in seconds whether to trust a business. A strong consistent brand builds that trust before you ever say a word.</p>
+  </div>
+  <div class="why-list">
+    <div class="why-item">
+      <div class="why-num">01</div>
+      <div>
+        <div class="why-title">Consistency builds trust</div>
+        <div class="why-desc">Businesses with consistent branding are seen as more professional and trustworthy by potential customers.</div>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">02</div>
+      <div>
+        <div class="why-title">Recognition drives repeat business</div>
+        <div class="why-desc">When people recognize your brand instantly they are more likely to come back and refer others.</div>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">03</div>
+      <div>
+        <div class="why-title">Good design commands higher prices</div>
+        <div class="why-desc">A polished professional brand allows you to charge what you are worth and attract better clients.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO - WHITE -->
+<section class="portfolio">
+  <div class="section-label">Our Work</div>
+  <h2 class="section-heading">Branding We're <em>Proud Of.</em></h2>
+  <p style="font-size:16px;font-weight:300;line-height:1.8;max-width:600px;margin-top:8px;">Portfolio coming soon. Reach out to see examples of our branding work and discuss what we can create for your business.</p>
+  <div class="portfolio-grid">
+    <div style="grid-column:span 3;border-radius:2px;overflow:hidden;">
+      <img src="images/8ADCC4D2-34E0-4212-9913-C78519ED7041.png" alt="GS Media Empire Brand Kit" style="width:100%;display:block;">
+    </div>
+    <div style="grid-column:span 3;aspect-ratio:3/1;background:var(--pink);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;text-align:center;">
+      <div style="font-size:28px;">✨</div>
+      <div style="font-family:'DM Serif Display',serif;font-size:24px;color:var(--black);font-style:italic;">More Coming Soon</div>
+      <div style="font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);">Stay Tuned</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT - BLACK -->
+<section class="contact" id="contact">
+  <div>
+    <div class="section-label" style="color:var(--gold-lt);">Get Started</div>
+    <h2 class="section-heading" style="color:var(--white);">Let's Build Your <em style="color:var(--pink);">Brand.</em></h2>
+    <p style="font-size:15px;color:rgba(255,255,255,.8);font-weight:300;line-height:1.8;margin-top:12px;margin-bottom:32px;">Fill out the form and I will get back to you to create a custom package for you.</p>
+    <div class="contact-detail">
+      <a href="tel:3073910650" class="contact-item"><span class="icon">📞</span> 307-391-0650</a>
+      <a href="mailto:gracie@gsmediaempirellc.com" class="contact-item"><span class="icon">✉</span> gracie@gsmediaempirellc.com</a>
+    </div>
+  </div>
+  <div class="contact-form">
+    <div class="form-row">
+      <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane"></div>
+      <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+    </div>
+    <div class="form-group"><label>Email Address</label><input type="email" placeholder="jane@yourbusiness.com"></div>
+    <div class="form-group"><label>Business Name</label><input type="text" placeholder="Your Business LLC"></div>
+    <div class="form-group">
+      <label>What Do You Need?</label>
+      <select>
+        <option value="">Select an option...</option>
+        <option>Logo Design</option>
+        <option>Full Brand Kit</option>
+        <option>Social Media Templates</option>
+        <option>Business Cards & Print</option>
+        <option>Full Brand Refresh</option>
+        <option>Custom Package</option>
+      </select>
+    </div>
+    <div class="form-group"><label>Tell Me About Your Brand Vision</label><textarea placeholder="Tell me about your business the vibe you are going for and any colors or styles you love..."></textarea></div>
+    <button class="form-submit">Send Message</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-list">
+        <a href="tel:3073910650" class="footer-link"><span class="icon">📞</span> 307-391-0650</a>
+        <a href="mailto:gracie@gsmediaempirellc.com" class="footer-link"><span class="icon">✉</span> gracie@gsmediaempirellc.com</a>
+        <span class="footer-link"><span class="icon">📍</span> Wyoming & Beyond</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+      <a href="index.html">
+        <img src="images/LARGE_GS_MEDIA_EMPIRE_LLC_LOGO.PNG" alt="GS Media Empire LLC" class="footer-logo-img">
+      </a>
+      <div class="footer-tagline" style="text-align:center;margin-top:16px;">We turn clicks into loyal customers.<br>Wyoming-based, serving businesses everywhere.</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Our Socials</div>
+      <div class="footer-list">
+        <a href="https://www.instagram.com/gsmediaempirellc?igsh=MXJ0bzljYjRpOWJjaA==" target="_blank" class="footer-link"><img src="images/IMG_1427.jpeg" style="width:18px;height:18px;border-radius:4px;"> @gsmediaempirellc</a>
+        <a href="https://www.facebook.com/profile.php?id=61584386363200" target="_blank" class="footer-link"><img src="images/IMG_1426.png" style="width:18px;height:18px;border-radius:50%;"> GS Media Empire LLC</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 GS Media Empire LLC All Rights Reserved.</div>
+    <div class="footer-copy">Designed & Built by GS Media Empire LLC</div>
+  </div>
+</footer>
+
+</body>
+</html>
