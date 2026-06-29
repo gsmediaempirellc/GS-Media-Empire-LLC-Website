@@ -367,6 +367,15 @@
   .footer-made { font-size: 14px; color: var(--white); }
   .footer-made span { color: var(--pink); }
 
+  /* ── HAMBURGER ── */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 200; padding: 4px; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; transition: all .3s; }
+  .mobile-menu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: var(--black); z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--white); text-decoration: none; transition: color .2s; }
+  .mobile-menu a:hover { color: var(--pink); }
+  .mobile-close { position: absolute; top: 24px; right: 24px; font-size: 32px; color: var(--white); cursor: pointer; background: none; border: none; }
+
   /* ── MOBILE ── */
   @media (max-width: 768px) {
     .topbar { padding: 10px 16px; flex-direction: column; justify-content: center; align-items: center; }
@@ -375,6 +384,7 @@
     nav { padding: 0 16px; height: 65px; overflow: hidden; }
     .nav-links { display: none; }
     .nav-logo img { height: 60px; }
+    .hamburger { display: flex; }
     .hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-left { padding: 36px 16px 32px; }
     .hero-right { height: 320px; }
@@ -423,7 +433,21 @@
     <li><a href="contact.html">Contact</a></li>
     <li><a href="contact.html" class="nav-cta">Let's Work Together</a></li>
   </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="index.html" onclick="toggleMenu()">Home</a>
+  <a href="about.html" onclick="toggleMenu()">About</a>
+  <a href="contact.html#faq" onclick="toggleMenu()">FAQs</a>
+  <a href="index.html#services" onclick="toggleMenu()">Services</a>
+  <a href="contact.html" onclick="toggleMenu()">Contact</a>
+  <a href="contact.html" onclick="toggleMenu()" style="background:var(--gold);color:var(--white);padding:14px 36px;border-radius:2px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:.1em;">Let's Work Together</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -539,7 +563,7 @@
 <!-- ABOUT TEASER -->
 <section class="about" id="about">
   <div class="about-img-wrap">
-    <img src="Gracie headshot.JPG" alt="Gracie">
+    <img src="Gracie headshot 2.JPG" alt="Gracie">
   </div>
   <div>
     <div class="section-label" style="color:var(--gold-lt);">About GS Media Empire</div>
@@ -566,7 +590,7 @@
         <a href="mailto:gracie@gsmediaempirellc.com" class="footer-link"><span class="icon">✉</span> gracie@gsmediaempirellc.com</a>
         <span class="footer-link"><span class="icon">📍</span> Wyoming & Beyond</span>
       </div>
-      <a href="#" class="email-signup-btn">Join Our Email List</a>
+      <a href="#" class="email-signup-btn">Subscribe</a>
     </div>
     <div>
       <div class="footer-col-title">Our Socials</div>
@@ -598,5 +622,10 @@
   </div>
 </footer>
 
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+</script>
 </body>
 </html>
