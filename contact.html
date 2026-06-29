@@ -11,18 +11,18 @@
   html { scroll-behavior: smooth; }
   body { background: var(--white); color: var(--black); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
 
-  .topbar { background: var(--black); padding: 10px 72px; display: flex; align-items: center; justify-content: space-between; }
-  .topbar-booking { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: #fff; }
+  .topbar { background: var(--black); padding: 10px 72px; display: flex; align-items: center; justify-content: space-between; position: relative; }
+  .topbar-booking { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: #fff; position: absolute; left: 50%; transform: translateX(-50%); }
+  .topbar-booking a { color: var(--gold-lt); text-decoration: none; font-weight: 600; }
+  .topbar-booking a:hover { color: var(--pink); }
   .topbar-booking b { color: var(--gold-lt); }
   .topbar-item { font-size: 11px; color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color .2s; }
   .topbar-item:hover { color: var(--pink); }
   .topbar-item span { color: var(--gold-lt); }
-  .topbar-booking a { color: var(--gold-lt); text-decoration: none; font-weight: 600; }
-  .topbar-booking a:hover { color: var(--pink); }
 
   nav { background: var(--pink); border-bottom: 1px solid rgba(201,138,26,.2); padding: 0 72px; display: flex; align-items: center; justify-content: space-between; height: 80px; position: sticky; top: 0; z-index: 100; overflow: hidden; }
-  .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); }
-  .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+  .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); z-index: 1; }
+  .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; z-index: 1; }
   .nav-links a { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--black); text-decoration: none; transition: color .2s; }
   .nav-links a:hover { color: var(--gold); }
   .nav-logo img { height: 80px; width: auto; display: block; object-fit: contain; }
