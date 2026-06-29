@@ -97,11 +97,8 @@
   .cta p { font-size: 16px; color: var(--black); font-weight: 300; line-height: 1.8; max-width: 480px; margin: 0 auto 44px; }
 
   /* FOOTER */
-  footer { background: var(--black); border-top: 1px solid rgba(255,255,255,.07); padding: 60px 72px 36px; display: flex; flex-direction: column; gap: 0; }
-  .footer-main { display: grid; grid-template-columns: 3fr 1fr; gap: 40px; padding-bottom: 36px; align-items: end; }
-  .footer-left { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; align-items: start; }
-  .footer-subscribe-wrap { margin-top: 28px; }
-  .footer-subscribe-wrap p { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--white); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; line-height: 1.4; margin-bottom: 10px; }
+  footer { background: var(--black); border-top: 1px solid rgba(255,255,255,.07); padding: 60px 72px 36px; display: flex; flex-direction: column; gap: 40px; }
+  .footer-top { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 40px; align-items: start; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,.07); }
   .footer-logo-wrap { display: flex; flex-direction: column; align-items: flex-start; }
   .footer-logo-img { height: 80px; width: auto; margin-bottom: 12px; display: block; }
   .footer-tagline { font-size: 15px; color: var(--white); font-weight: 300; line-height: 1.7; }
@@ -113,10 +110,11 @@
   .footer-service-btns { display: flex; flex-direction: column; gap: 8px; }
   .footer-service-btn { background: transparent; color: var(--gold); border: 1px solid var(--gold); padding: 8px 10px; border-radius: 2px; font-size: 15px; font-weight: 500; text-transform: uppercase; text-decoration: none; text-align: center; transition: all .25s; display: block; }
   .footer-service-btn:hover { background: var(--pink); border-color: var(--pink); color: var(--black); }
-  .subscribe-btn { display: block; background: var(--pink); color: var(--black); padding: 18px; border-radius: 2px; font-size: 15px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; transition: all .25s; text-align: center; width: 100%; }
+  .footer-subscribe { display: grid; grid-template-columns: 3fr 1fr; gap: 40px; align-items: center; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,.07); }
+  .footer-subscribe p { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--white); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; line-height: 1.5; }
+  .subscribe-btn { display: block; background: var(--pink); color: var(--black); padding: 18px; border-radius: 2px; font-size: 15px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; transition: all .25s; text-align: center; }
   .subscribe-btn:hover { background: var(--gold); color: var(--white); }
-  .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,.07); margin: 28px 0; }
-  .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-bottom: 8px; }
+  .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   .footer-copy { font-size: 14px; color: var(--white); }
   .footer-made { font-size: 14px; color: var(--white); }
 
@@ -324,33 +322,27 @@
 </section>
 
 <footer>
-  <div class="footer-main">
-    <div class="footer-left">
-      <div>
-        <div class="footer-col-title">Contact</div>
-        <div class="footer-list">
-          <a href="tel:3073910650" class="footer-link"><span class="icon">📞</span> 307-391-0650</a>
-          <a href="mailto:gracie@gsmediaempirellc.com" class="footer-link"><span class="icon">✉</span> gracie@gsmediaempirellc.com</a>
-          <span class="footer-link"><span class="icon">📍</span> Wyoming & Beyond</span>
-        </div>
-        <div class="footer-subscribe-wrap">
-          <p>Stay in the loop on tips, offers, and updates from GS Media Empire.</p>
-          <a href="#" class="subscribe-btn">Subscribe</a>
-        </div>
+  <div class="footer-top">
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-list">
+        <a href="tel:3073910650" class="footer-link"><span class="icon">📞</span> 307-391-0650</a>
+        <a href="mailto:gracie@gsmediaempirellc.com" class="footer-link"><span class="icon">✉</span> gracie@gsmediaempirellc.com</a>
+        <span class="footer-link"><span class="icon">📍</span> Wyoming & Beyond</span>
       </div>
-      <div>
-        <div class="footer-col-title">Our Socials</div>
-        <div class="footer-list">
-          <a href="https://www.instagram.com/gsmediaempirellc?igsh=MXJ0bzljYjRpOWJjaA==" target="_blank" class="footer-link"><img src="INSTA LOGO.jpeg" style="width:18px;height:18px;border-radius:4px;"> @gsmediaempirellc</a>
-          <a href="https://www.facebook.com/profile.php?id=61584386363200" target="_blank" class="footer-link"><img src="FB LOGO.png" style="width:18px;height:18px;border-radius:50%;"> GS Media Empire LLC</a>
-        </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Our Socials</div>
+      <div class="footer-list">
+        <a href="https://www.instagram.com/gsmediaempirellc?igsh=MXJ0bzljYjRpOWJjaA==" target="_blank" class="footer-link"><img src="INSTA LOGO.jpeg" style="width:18px;height:18px;border-radius:4px;"> @gsmediaempirellc</a>
+        <a href="https://www.facebook.com/profile.php?id=61584386363200" target="_blank" class="footer-link"><img src="FB LOGO.png" style="width:18px;height:18px;border-radius:50%;"> GS Media Empire LLC</a>
       </div>
-      <div class="footer-logo-wrap">
-        <a href="index.html">
-          <img src="LARGE GS MEDIA EMPIRE LLC LOGO.PNG" alt="GS Media Empire LLC" class="footer-logo-img">
-        </a>
-        <div class="footer-tagline">We turn clicks into loyal customers.<br>Wyoming-based, serving businesses everywhere.</div>
-      </div>
+    </div>
+    <div class="footer-logo-wrap">
+      <a href="index.html">
+        <img src="LARGE GS MEDIA EMPIRE LLC LOGO.PNG" alt="GS Media Empire LLC" class="footer-logo-img">
+      </a>
+      <div class="footer-tagline">We turn clicks into loyal customers.<br>Wyoming-based, serving businesses everywhere.</div>
     </div>
     <div>
       <div class="footer-col-title">Services</div>
@@ -363,7 +355,10 @@
       </div>
     </div>
   </div>
-  <hr class="footer-divider">
+  <div class="footer-subscribe">
+    <p>Stay in the loop on tips, offers, and updates from GS Media Empire.</p>
+    <a href="#" class="subscribe-btn">Subscribe</a>
+  </div>
   <div class="footer-bottom">
     <div class="footer-copy">© 2026 GS Media Empire LLC All Rights Reserved.</div>
     <a href="privacy-policy.html" style="font-size:14px;color:var(--white);text-decoration:none;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--white)'">Privacy Policy</a>
