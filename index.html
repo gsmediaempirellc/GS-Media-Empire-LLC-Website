@@ -396,9 +396,9 @@
     .btn-dark, .btn-ghost { width: 100%; text-align: center; }
     .marquee { display: none; }
     .stats { grid-template-columns: 1fr; padding: 48px 16px; gap: 32px; border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold); }
-    .stat { padding: 0; border: none; text-align: center; }
-    .stat-num { font-size: clamp(64px, 18vw, 90px); }
-    .stat-label { margin: 0 auto; }
+    .stat { padding: 0; border: none; text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .stat-num { font-size: clamp(64px, 18vw, 90px); text-align: center; }
+    .stat-label { margin: 0 auto; text-align: center; max-width: 200px; }
     section[id="services"] { padding: 56px 16px !important; }
     section[id="services"] > div:last-child { grid-template-columns: 1fr !important; }
     .about { grid-template-columns: 1fr; padding: 56px 16px; gap: 36px; }
@@ -508,15 +508,15 @@
 
 <!-- STATS -->
 <section class="stats">
-  <div class="stat">
+  <a href="contact.html" class="stat" style="text-decoration:none;color:inherit;display:block;">
     <div class="stat-num">202%</div>
     <div class="stat-label">Engagement increase within the first month</div>
   </div>
-  <div class="stat">
+  <a href="contact.html" class="stat" style="text-decoration:none;color:inherit;display:block;">
     <div class="stat-num">63K</div>
     <div class="stat-label">Average views in the first three months</div>
   </div>
-  <div class="stat">
+  <a href="contact.html" class="stat" style="text-decoration:none;color:inherit;display:block;">
     <div class="stat-num">5+</div>
     <div class="stat-label">Wyoming businesses grown & counting</div>
   </div>
