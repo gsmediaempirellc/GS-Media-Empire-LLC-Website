@@ -174,16 +174,30 @@
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="index.html#faqs">FAQs</a></li>
+    <li><a href="contact.html#faq">FAQs</a></li>
+    <li><a href="index.html#services">Services</a></li>
   </ul>
   <a href="index.html" class="nav-logo">
-    <img src="images/LARGE_GS_MEDIA_EMPIRE_LLC_LOGO.PNG" alt="GS Media Empire LLC">
+    <img src="LARGE GS MEDIA EMPIRE LLC LOGO.PNG" alt="GS Media Empire LLC">
   </a>
   <ul class="nav-links">
     <li><a href="contact.html">Contact</a></li>
     <li><a href="contact.html" class="nav-cta">Let's Work Together</a></li>
   </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="index.html" onclick="toggleMenu()">Home</a>
+  <a href="about.html" onclick="toggleMenu()">About</a>
+  <a href="contact.html#faq" onclick="toggleMenu()">FAQs</a>
+  <a href="index.html#services" onclick="toggleMenu()">Services</a>
+  <a href="contact.html" onclick="toggleMenu()">Contact</a>
+  <a href="contact.html" onclick="toggleMenu()" style="background:var(--gold);color:var(--white);padding:14px 36px;border-radius:2px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:.1em;">Let's Work Together</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
