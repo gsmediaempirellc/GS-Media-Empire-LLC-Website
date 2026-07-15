@@ -50,8 +50,8 @@
 
   .headshot-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
   .headshot-card { position: relative; aspect-ratio: 3/4; overflow: hidden; background: #f0f0f0; cursor: default; }
-  .headshot-card.wide { grid-column: span 2; aspect-ratio: 16/9; background: var(--black); }
-  .headshot-card.wide img { object-fit: contain; }
+  .headshot-card.wide { grid-column: span 2; aspect-ratio: auto; background: var(--black); }
+  .headshot-card.wide img { width: 100%; height: auto; object-fit: contain; display: block; }
   .headshot-card:not(.wide) img { object-fit: cover; }
 
   .cta-section { padding: 100px 72px; background: var(--black); text-align: center; }
@@ -107,7 +107,7 @@
     .hero { grid-template-columns: 1fr; padding: 48px 16px 40px; gap: 40px; }
     .grid-section { padding: 56px 16px 72px; }
     .headshot-grid { grid-template-columns: repeat(2, 1fr); }
-    .headshot-card.wide { grid-column: span 2; aspect-ratio: 16/9; }
+    .headshot-card.wide { grid-column: span 2; aspect-ratio: auto; }
     .expect-section { grid-template-columns: 1fr; padding: 56px 16px; gap: 40px; }
     .cta-section { padding: 64px 16px; }
     footer { padding: 40px 16px 28px; }
@@ -209,12 +209,6 @@
     </div>
     <div class="headshot-card">
       <img src="Steve Jordan - Plant Development Coordinator.jpg" alt="Steve Jordan - Plant Development Coordinator">
-    </div>
-    <div class="headshot-card">
-      <img src="Will Zilka - Compliance .jpg" alt="Will Zilka - Compliance">
-    </div>
-    <div class="headshot-card">
-      <img src="Dan Sanford - Casper Manager.jpg" alt="Dan Sanford - Casper Manager">
     </div>
     <div class="headshot-card">
       <img src="Caleb Simons - Finance Manager.jpg" alt="Caleb Simons - Finance Manager">
