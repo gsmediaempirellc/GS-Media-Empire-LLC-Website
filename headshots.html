@@ -50,7 +50,7 @@
 
   .headshot-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
   .headshot-card { position: relative; aspect-ratio: 3/4; overflow: hidden; background: #f0f0f0; cursor: default; }
-  .headshot-card.wide { grid-column: span 2; aspect-ratio: auto; background: var(--black); }
+  .headshot-card.wide { grid-column: span 4; aspect-ratio: auto; background: var(--black); }
   .headshot-card.wide img { width: 100%; height: auto; object-fit: contain; display: block; }
   .headshot-card:not(.wide) img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; transition: transform .5s ease; }
   .headshot-card:not(.wide):hover img { transform: scale(1.05); }
