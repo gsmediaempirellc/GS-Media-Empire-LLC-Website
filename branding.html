@@ -46,7 +46,7 @@
 
   .services { padding: 100px 72px; background: #f9f9f9; }
   .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: rgba(201,138,26,.1); margin-top: 56px; }
-  .service-item { background: var(--white); padding: 40px 32px; border-bottom: 3px solid transparent; transition: all .3s; }
+  .service-item { background: var(--white); padding: 40px 32px; border-bottom: 3px solid transparent; transition: all .3s; text-decoration: none; color: var(--black); display: block; cursor: pointer; }
   .service-item:hover { border-color: var(--pink); background: #fff5fb; }
   .service-icon { font-size: 28px; margin-bottom: 16px; }
   .service-title { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 12px; }
@@ -162,13 +162,28 @@
 
 <section class="hero">
   <div>
-    <div class="section-label">Our Services</div>
+    <a href="index.html#services" class="section-label" style="text-decoration:none;">Our Services</a>
     <h1>A Brand That Makes<br>People <em>Remember You.</em></h1>
     <p>Your brand is more than a logo. It is the feeling people get when they find you online. We build brands that are consistent recognizable and impossible to forget.</p>
     <a href="#contact" class="btn-gold">Start Your Brand</a>
   </div>
-  <div class="hero-img">
-    <img src="8ADCC4D2-34E0-4212-9913-C78519ED7041.png" alt="GS Media Empire Brand Kit">
+  <div class="hero-img" style="background:var(--black);border-radius:2px;padding:48px;display:flex;flex-direction:column;justify-content:space-between;height:560px;">
+    <div>
+      <div style="font-family:'DM Serif Display',serif;font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:8px;">GS Media Empire LLC</div>
+      <div style="font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:var(--white);line-height:1.15;">Brand<br>Kit.</div>
+    </div>
+    <div>
+      <div style="font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:14px;">Color Palette</div>
+      <div style="display:flex;gap:12px;margin-bottom:36px;">
+        <div style="width:52px;height:52px;border-radius:2px;background:var(--pink);"></div>
+        <div style="width:52px;height:52px;border-radius:2px;background:var(--gold-lt);"></div>
+        <div style="width:52px;height:52px;border-radius:2px;background:var(--black);border:1px solid rgba(255,255,255,.2);"></div>
+        <div style="width:52px;height:52px;border-radius:2px;background:var(--white);"></div>
+      </div>
+      <div style="font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:10px;">Typography</div>
+      <div style="font-family:'DM Serif Display',serif;font-size:22px;color:var(--white);margin-bottom:4px;">DM Serif Display</div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:15px;font-weight:300;color:rgba(255,255,255,.7);">DM Sans</div>
+    </div>
   </div>
 </section>
 
@@ -176,36 +191,36 @@
   <div class="section-label">What's Included</div>
   <h2 class="section-heading">Everything Your Brand<br><em>Needs to Shine.</em></h2>
   <div class="services-grid">
-    <div class="service-item">
+    <a href="#contact" class="service-item" onclick="selectBrandNeed('Logo Design')">
       <div class="service-icon">🎨</div>
       <div class="service-title">Logo Design</div>
       <div class="service-desc">A professional logo that captures your brand personality and looks great everywhere from your website to your business cards to your social profiles.</div>
-    </div>
-    <div class="service-item">
+    </a>
+    <a href="#contact" class="service-item" onclick="selectBrandNeed('Full Brand Kit')">
       <div class="service-icon">📋</div>
       <div class="service-title">Brand Kits & Guidelines</div>
       <div class="service-desc">A complete brand kit with everything you need to stay consistent including your logo variations fonts colors and rules for how to use them.</div>
-    </div>
-    <div class="service-item">
+    </a>
+    <a href="#contact" class="service-item" onclick="selectBrandNeed('Full Brand Kit')">
       <div class="service-icon">🖌️</div>
       <div class="service-title">Color Palettes & Typography</div>
       <div class="service-desc">The right colors and fonts make your brand instantly recognizable. We build a palette and type system that feels completely like you.</div>
-    </div>
-    <div class="service-item">
+    </a>
+    <a href="#contact" class="service-item" onclick="selectBrandNeed('Social Media Templates')">
       <div class="service-icon">📱</div>
       <div class="service-title">Social Media Templates</div>
       <div class="service-desc">Done for you Canva templates for posts stories and reels so your social media always looks on brand even when you are posting yourself.</div>
-    </div>
-    <div class="service-item">
+    </a>
+    <a href="#contact" class="service-item" onclick="selectBrandNeed('Business Cards & Print')">
       <div class="service-icon">🖨️</div>
       <div class="service-title">Business Cards & Print</div>
       <div class="service-desc">Business cards flyers menus and any other print materials designed to match your brand and make a great first impression.</div>
-    </div>
-    <div class="service-item">
+    </a>
+    <a href="#contact" class="service-item" onclick="selectBrandNeed('Full Brand Refresh')">
       <div class="service-icon">✨</div>
       <div class="service-title">Full Brand Refresh</div>
       <div class="service-desc">Already have a brand but it feels outdated? We will revamp your entire look and feel while keeping what makes your business recognizable.</div>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -245,9 +260,21 @@
   <h2 class="section-heading">Branding We're <em>Proud Of.</em></h2>
   <p style="font-size:16px;font-weight:300;line-height:1.8;max-width:600px;margin-top:8px;">Portfolio coming soon. Reach out to see examples of our branding work and discuss what we can create for your business.</p>
   <div class="portfolio-grid">
-    <div style="grid-column:span 3;aspect-ratio:3/1;background:var(--pink);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;text-align:center;">
+    <div style="aspect-ratio:1;border-radius:2px;overflow:hidden;background:#f5f5f5;">
+      <img src="BPI Branding Logo Design.PNG" alt="Blakeman Propane Logo Design" style="width:100%;height:100%;object-fit:contain;display:block;">
+    </div>
+    <div style="aspect-ratio:1;border-radius:2px;overflow:hidden;background:#f5f5f5;">
+      <img src="Business card - 2 Front.PNG" alt="Business Card Front" style="width:100%;height:100%;object-fit:contain;display:block;">
+    </div>
+    <div style="aspect-ratio:1;border-radius:2px;overflow:hidden;background:#f5f5f5;">
+      <img src="Business card - 1 Back.PNG" alt="Business Card Back" style="width:100%;height:100%;object-fit:contain;display:block;">
+    </div>
+    <div style="aspect-ratio:1;border-radius:2px;overflow:hidden;background:#f5f5f5;">
+      <img src="Logo with number.PNG" alt="Logo Design" style="width:100%;height:100%;object-fit:contain;display:block;">
+    </div>
+    <div style="aspect-ratio:1;background:var(--pink);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;text-align:center;">
       <div style="font-size:28px;">✨</div>
-      <div style="font-family:'DM Serif Display',serif;font-size:24px;color:var(--black);font-style:italic;">More Coming Soon</div>
+      <div style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--black);font-style:italic;">More Coming Soon</div>
       <div style="font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);">Stay Tuned</div>
     </div>
   </div>
@@ -272,7 +299,7 @@
     <div class="form-group"><label>Business Name</label><input type="text" placeholder="Your Business LLC"></div>
     <div class="form-group">
       <label>What Do You Need?</label>
-      <select>
+      <select id="brandNeed">
         <option value="">Select an option...</option>
         <option>Logo Design</option>
         <option>Full Brand Kit</option>
@@ -336,6 +363,9 @@
 <script>
   function toggleMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function selectBrandNeed(value) {
+    document.getElementById('brandNeed').value = value;
   }
 </script>
 </body>
