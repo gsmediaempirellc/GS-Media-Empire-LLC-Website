@@ -52,11 +52,10 @@
   .client-label:first-of-type { margin-top: 0; }
 
   .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
-  .photo-card { position: relative; aspect-ratio: 4/3; overflow: hidden; background: #f0f0f0; }
+  .photo-card { position: relative; aspect-ratio: 4/3; overflow: hidden; background: #f5f5f5; }
   .photo-card.portrait { aspect-ratio: 3/4; }
   .photo-card.square { aspect-ratio: 1/1; }
-  .photo-card img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform .5s ease; }
-  .photo-card:hover img { transform: scale(1.04); }
+  .photo-card img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
 
   .cta-section { padding: 100px 72px; background: var(--black); text-align: center; }
   .cta-section h2 { font-family: 'DM Serif Display', serif; font-size: clamp(34px, 4vw, 54px); font-weight: 400; color: var(--white); margin-bottom: 20px; line-height: 1.08; }
