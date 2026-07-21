@@ -41,7 +41,7 @@
   .hero h1 em { font-style: italic; color: var(--gold); }
   .hero p { font-size: 16px; line-height: 1.8; color: var(--black); font-weight: 300; margin-bottom: 40px; max-width: 480px; }
   .hero-right { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-  .hero-img { border-radius: 4px; overflow: hidden; aspect-ratio: 1; background: var(--white); border: 1px solid rgba(201,138,26,.12); display: block; }
+  .hero-img { border-radius: 4px; overflow: hidden; height: 400px; background: var(--white); border: 1px solid rgba(201,138,26,.12); display: block; }
   .hero-img img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
 
   .services { padding: 100px 72px; background: #f9f9f9; }
@@ -130,6 +130,7 @@
     .hamburger { display: flex; }
     .hero { grid-template-columns: 1fr; padding: 48px 16px 40px; gap: 40px; }
     .hero-right { grid-template-columns: repeat(3, 1fr); }
+    .hero-img { height: 200px; }
     .services { padding: 56px 16px; }
     .services-grid { grid-template-columns: 1fr; }
     .platforms { padding: 56px 16px; }
@@ -139,6 +140,12 @@
     .contact { grid-template-columns: 1fr; padding: 56px 16px; gap: 40px; }
     .form-row { grid-template-columns: 1fr; }
     footer { padding: 40px 16px 28px; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-right { grid-template-columns: 1fr; }
+    .hero-img { height: 280px; }
+    .content-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -205,8 +212,8 @@
     <div style="font-size:13px;color:rgba(255,255,255,.8);font-weight:300;line-height:1.7;letter-spacing:.04em;">Engagement increase within the first month</div>
   </div>
   <div style="background:#111;padding:48px 32px;text-align:center;border-top:3px solid var(--pink);position:relative;">
-    <div style="font-family:'DM Serif Display',serif;font-size:80px;line-height:1;background:linear-gradient(135deg,var(--gold-lt),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px;">63K</div>
-    <div style="font-size:13px;color:rgba(255,255,255,.8);font-weight:300;line-height:1.7;letter-spacing:.04em;">Average views in the first three months</div>
+    <div style="font-family:'DM Serif Display',serif;font-size:80px;line-height:1;background:linear-gradient(135deg,var(--gold-lt),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px;">260K</div>
+    <div style="font-size:13px;color:rgba(255,255,255,.8);font-weight:300;line-height:1.7;letter-spacing:.04em;">Average views in the first six months</div>
   </div>
   <div style="background:#111;padding:48px 32px;text-align:center;border-top:3px solid var(--gold);position:relative;">
     <div style="font-family:'DM Serif Display',serif;font-size:80px;line-height:1;background:linear-gradient(135deg,var(--pink),var(--gold-lt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px;">3X</div>
@@ -262,7 +269,10 @@
       <img src="FB LOGO.png" alt="Facebook" style="width:28px;height:28px;border-radius:50%;"> Facebook
     </a>
     <a href="contact.html" class="platform-pill" style="display:inline-flex;align-items:center;gap:10px;">
-      <img src="IMG_1428.png" alt="TikTok" style="width:28px;height:28px;border-radius:50%;"> TikTok
+      <img src="Tik Tok .PNG" alt="TikTok" style="width:28px;height:28px;border-radius:50%;"> TikTok
+    </a>
+    <a href="#contact" class="platform-pill" style="display:inline-flex;align-items:center;gap:10px;">
+      & More
     </a>
   </div>
 </section>
@@ -278,17 +288,14 @@
         <div class="feat-label">Engagement increase in month one</div>
       </div>
       <div>
-        <div class="feat-num">63K</div>
-        <div class="feat-label">Average views in first three months</div>
+        <div class="feat-num">260K</div>
+        <div class="feat-label">Average views in first six months</div>
       </div>
     </div>
-    <a href="https://www.facebook.com/profile.php?id=61585212026033" target="_blank" class="btn-gold" style="margin-top:32px;">View Their Facebook →</a>
+    <a href="https://www.facebook.com/profile.php?id=61585212026033" target="_blank" class="btn-gold" style="margin-top:32px;">Social Media →</a>
   </div>
-  <div class="featured-imgs">
-    <a href="#contact" class="featured-img"><img src="BPI Content 3.PNG" alt="Blakeman Propane Content"></a>
-    <a href="#contact" class="featured-img"><img src="BPI Content 11.JPG" alt="Blakeman Propane Content"></a>
-    <a href="#contact" class="featured-img"><img src="BPI Content 1.PNG" alt="Blakeman Propane Content"></a>
-    <a href="#contact" class="featured-img"><img src="BPI Content 9 .PNG" alt="Blakeman Propane Content"></a>
+  <div style="border-radius:4px;overflow:hidden;border:1px solid rgba(201,138,26,.12);display:flex;justify-content:center;background:var(--white);">
+    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61585212026033&tabs=timeline&width=500&height=650&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" width="100%" height="650" style="border:none;overflow:hidden;max-width:500px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
   </div>
 </section>
 
@@ -324,7 +331,7 @@
     <a href="#contact" class="content-card"><img src="GC Content 6.PNG" alt="Glenn Construction Content"></a>
   </div>
 
-  <div class="client-label">Ice Cream Café (ICC)</div>
+  <div class="client-label">Ice Cream Café</div>
   <div class="content-grid">
     <a href="#contact" class="content-card"><img src="ICC Content .jpg" alt="Ice Cream Café Content"></a>
     <a href="#contact" class="content-card"><img src="ICC Content 1.jpg" alt="Ice Cream Café Content"></a>
