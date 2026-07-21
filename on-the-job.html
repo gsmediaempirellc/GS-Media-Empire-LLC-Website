@@ -38,7 +38,7 @@
   .btn-gold:hover { background: var(--pink); color: var(--black); transform: translateY(-2px); }
   .back-link { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: color .2s; }
   .back-link:hover { color: var(--black); }
-  .hero-img { position: relative; background: #f5f5f5; }
+  .hero-img { position: relative; background: var(--white); }
   .hero-img img { width: 100%; height: 560px; object-fit: cover; object-position: top; border-radius: 2px; display: block; }
   .hero-img::after { content: ''; position: absolute; bottom: -16px; right: -16px; width: 80px; height: 80px; background: var(--pink); border-radius: 2px; z-index: -1; }
 
@@ -48,11 +48,11 @@
   .grid-header h2 em { font-style: italic; color: var(--gold); }
   .grid-header p { font-size: 15px; font-weight: 300; line-height: 1.8; color: #444; max-width: 560px; }
 
-  .photo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
-  .photo-card { position: relative; aspect-ratio: 3/4; overflow: hidden; background: #f5f5f5; }
+  .photo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .photo-card { position: relative; aspect-ratio: 3/4; overflow: hidden; background: var(--white); border-radius: 4px; border: 1px solid rgba(201,138,26,.12); }
   .photo-card img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
 
-  .photo-card-soon { aspect-ratio: 3/4; background: var(--pink); border: none; border-radius: 2px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px; text-align: center; }
+  .photo-card-soon { aspect-ratio: 3/4; background: var(--pink); border: none; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px; text-align: center; }
   .photo-card-soon .soon-icon { font-size: 28px; }
   .photo-card-soon p { font-family: 'DM Serif Display', serif; font-size: 18px; font-style: italic; color: var(--black); }
 
@@ -164,7 +164,7 @@
     <div class="photo-card">
       <img src="BPI Photo 1.jpg" alt="Employee On The Job">
     </div>
-    <div class="photo-card" style="background:#f5f5f5;">
+    <div class="photo-card">
       <img src="BPI Photo 3.JPG" alt="Employee On The Job">
     </div>
     <div class="photo-card">
