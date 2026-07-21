@@ -41,12 +41,12 @@
   .hero h1 em { font-style: italic; color: var(--gold); }
   .hero p { font-size: 16px; line-height: 1.8; color: var(--black); font-weight: 300; margin-bottom: 40px; max-width: 480px; }
   .hero-right { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-  .hero-img { border-radius: 4px; overflow: hidden; height: 480px; background: var(--white); border: 1px solid rgba(201,138,26,.12); display: flex; align-items: center; justify-content: center; }
+  .hero-img { border-radius: 4px; overflow: hidden; height: 560px; background: var(--white); border: none; display: flex; align-items: center; justify-content: center; }
   .hero-img img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
 
   .services { padding: 100px 72px; background: #f9f9f9; }
   .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: rgba(201,138,26,.1); margin-top: 56px; }
-  .service-item { background: var(--white); padding: 40px 36px; border-bottom: 3px solid transparent; transition: all .3s; }
+  .service-item { background: var(--white); padding: 40px 36px; border-bottom: 3px solid transparent; transition: all .3s; text-decoration: none; color: var(--black); display: block; cursor: pointer; }
   .service-item:hover { border-color: var(--pink); background: #fff5fb; }
   .service-item-icon { font-size: 28px; margin-bottom: 16px; }
   .service-item-title { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--black); margin-bottom: 12px; }
@@ -130,7 +130,7 @@
     .hamburger { display: flex; }
     .hero { grid-template-columns: 1fr; padding: 48px 16px 40px; gap: 40px; }
     .hero-right { grid-template-columns: repeat(3, 1fr); }
-    .hero-img { height: 200px; }
+    .hero-img { height: 240px; }
     .services { padding: 56px 16px; }
     .services-grid { grid-template-columns: 1fr; }
     .platforms { padding: 56px 16px; }
@@ -144,7 +144,7 @@
 
   @media (max-width: 480px) {
     .hero-right { grid-template-columns: 1fr; }
-    .hero-img { height: 280px; }
+    .hero-img { height: 340px; }
     .content-grid { grid-template-columns: 1fr; }
   }
 </style>
@@ -225,36 +225,36 @@
   <div class="section-label">What's Included</div>
   <h2 class="section-heading">Full Service Social<br><em>Management & Ads</em></h2>
   <div class="services-grid">
-    <div class="service-item">
+    <a href="#contact" class="service-item">
       <div class="service-item-icon">🎯</div>
       <div class="service-item-title">Strategy & Planning</div>
       <div class="service-item-desc">Every account gets a custom strategy built around your brand your audience and your goals. No guesswork just a clear plan that works.</div>
-    </div>
-    <div class="service-item">
+    </a>
+    <a href="#contact" class="service-item">
       <div class="service-item-icon">✍️</div>
       <div class="service-item-title">Content Creation</div>
       <div class="service-item-desc">Graphics captions reels and stories that stop the scroll. All content is branded to your business and designed to drive engagement.</div>
-    </div>
-    <div class="service-item">
+    </a>
+    <a href="#contact" class="service-item">
       <div class="service-item-icon">📅</div>
       <div class="service-item-title">Posting & Scheduling</div>
       <div class="service-item-desc">We handle all posting and scheduling across your platforms so your feed stays consistent and active without you lifting a finger.</div>
-    </div>
-    <div class="service-item">
+    </a>
+    <a href="#contact" class="service-item">
       <div class="service-item-icon">💬</div>
       <div class="service-item-title">Community Engagement</div>
       <div class="service-item-desc">We respond to comments DMs and interactions to keep your audience engaged and build a real community around your brand.</div>
-    </div>
-    <div class="service-item">
+    </a>
+    <a href="#contact" class="service-item">
       <div class="service-item-icon">💰</div>
       <div class="service-item-title">Paid Advertising</div>
       <div class="service-item-desc">Facebook and Instagram ads that actually convert. We set up target and manage your ad campaigns to get the most out of every dollar you spend.</div>
-    </div>
-    <div class="service-item">
+    </a>
+    <a href="#contact" class="service-item">
       <div class="service-item-icon">📊</div>
       <div class="service-item-title">Monthly Reporting</div>
       <div class="service-item-desc">Clear monthly reports that show you exactly what's working what's growing and where we're headed next. No confusing jargon just real results.</div>
-    </div>
+    </a>
   </div>
 </section>
 
