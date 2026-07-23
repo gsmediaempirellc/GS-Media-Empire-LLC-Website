@@ -53,12 +53,18 @@
   .service-title { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 12px; }
   .service-desc { font-size: 14px; font-weight: 300; line-height: 1.75; }
 
+  .tier-card { background: var(--white); padding: 44px 32px; text-decoration: none; color: var(--black); display: block; border-bottom: 3px solid transparent; transition: all .3s; }
+  .tier-card:hover { border-color: var(--pink); background: #fff5fb; }
+  .tier-icon { font-size: 28px; margin-bottom: 16px; }
+  .tier-title { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 12px; }
+  .tier-desc { font-size: 14px; font-weight: 300; line-height: 1.75; }
+
   .process { padding: 100px 72px; background: var(--black); }
   .process .section-label { color: var(--gold-lt); }
   .process .section-heading { color: var(--white); }
   .process .section-heading em { color: var(--pink); }
   .process-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; background: rgba(255,255,255,.06); margin-top: 56px; }
-  .process-step { background: var(--black); padding: 40px 28px; border-top: 3px solid transparent; transition: border-color .3s; }
+  .process-step { background: var(--black); padding: 40px 28px; border-top: 3px solid transparent; transition: border-color .3s; text-decoration: none; display: block; cursor: pointer; }
   .process-step:hover { border-color: var(--pink); }
   .step-num { font-family: 'DM Serif Display', serif; font-size: 48px; color: var(--gold-lt); line-height: 1; margin-bottom: 16px; }
   .step-title { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--white); margin-bottom: 12px; }
@@ -67,7 +73,7 @@
   .featured { padding: 100px 72px; background: var(--white); }
   .featured-card { border: 1px solid rgba(201,138,26,.15); border-radius: 2px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; }
   .featured-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--white); }
-  .featured-img { aspect-ratio: 4/3; overflow: hidden; background: var(--white); }
+  .featured-img { aspect-ratio: 4/3; overflow: hidden; background: var(--white); display: block; cursor: pointer; }
   .featured-img img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
   .featured-content { padding: 56px 48px; display: flex; flex-direction: column; justify-content: center; }
   .featured-tag { font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
@@ -134,6 +140,7 @@
     .hero-imgs { grid-template-columns: 1fr 1fr; }
     .services { padding: 56px 16px; }
     .services-grid { grid-template-columns: 1fr; }
+    .tier-grid { grid-template-columns: 1fr !important; }
     .process { padding: 56px 16px; }
     .process-steps { grid-template-columns: 1fr 1fr; }
     .featured { padding: 56px 16px; }
@@ -231,30 +238,53 @@
   </div>
 </section>
 
-<section class="process">
+<section style="padding:100px 72px;background:var(--white);">
+  <div class="section-label">Every Budget, Every Need</div>
+  <h2 class="section-heading">Find the Right <em>Fit for You.</em></h2>
+  <p style="font-size:16px;font-weight:300;line-height:1.8;max-width:600px;margin-bottom:56px;">Not every business needs the same thing. Whether you want something simple you can update yourself or a fully custom coded site built for performance, we've got an option that fits.</p>
+  <div class="tier-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(201,138,26,.1);">
+    <a href="#contact" class="tier-card">
+      <div class="tier-icon">🌱</div>
+      <div class="tier-title">Simple & Editable</div>
+      <div class="tier-desc">A clean easy to manage site built on simple platforms. Perfect if you want the ability to make small updates yourself without calling a developer.</div>
+    </a>
+    <a href="#contact" class="tier-card">
+      <div class="tier-icon">🛠️</div>
+      <div class="tier-title">Custom Coded</div>
+      <div class="tier-desc">A fully custom built site written from scratch. More flexibility more polish and built specifically around your brand and how your business actually works.</div>
+    </a>
+    <a href="#contact" class="tier-card">
+      <div class="tier-icon">👑</div>
+      <div class="tier-title">Elite Custom Build</div>
+      <div class="tier-desc">Our top tier build for businesses that need something completely one of a kind. Advanced functionality multiple integrations and a site designed to stand out and scale with you.</div>
+    </a>
+  </div>
+</section>
+
+
   <div class="section-label">How It Works</div>
   <h2 class="section-heading">Our Simple <em>Process.</em></h2>
   <div class="process-steps">
-    <div class="process-step">
+    <a href="#contact" class="process-step">
       <div class="step-num">01</div>
       <div class="step-title">Discovery Call</div>
       <div class="step-desc">We chat about your business your goals your brand and what you need your website to do for you.</div>
-    </div>
-    <div class="process-step">
+    </a>
+    <a href="#contact" class="process-step">
       <div class="step-num">02</div>
       <div class="step-title">Design & Build</div>
       <div class="step-desc">We design and build your custom site from scratch using your brand colors fonts and content.</div>
-    </div>
-    <div class="process-step">
+    </a>
+    <a href="#contact" class="process-step">
       <div class="step-num">03</div>
       <div class="step-title">Review & Refine</div>
       <div class="step-desc">You review the site we make any changes until everything looks and feels exactly right.</div>
-    </div>
-    <div class="process-step">
+    </a>
+    <a href="#contact" class="process-step">
       <div class="step-num">04</div>
       <div class="step-title">Go Live</div>
       <div class="step-desc">We launch your site connect your domain and make sure everything is running perfectly before handing it over.</div>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -263,12 +293,12 @@
   <h2 class="section-heading" style="padding:0 72px 40px;">Real Work. <em>Real Results.</em></h2>
   <div class="featured-card" style="margin:0 72px 100px;">
     <div class="featured-imgs" style="background:var(--white);">
-      <div class="featured-img"><img src="GC W DS.jpeg" alt="Glenn Construction Website"></div>
-      <div class="featured-img"><img src="GC W HP.jpeg" alt="Glenn Construction Website"></div>
-      <div class="featured-img"><img src="GC W RR.jpeg" alt="Glenn Construction Website"></div>
-      <div class="featured-img"><img src="GC W C 2.jpeg" alt="Glenn Construction Website"></div>
-      <div class="featured-img"><img src="GC W HP 2.jpeg" alt="Glenn Construction Website"></div>
-      <div class="featured-img"><img src="GC W RR Quote.jpg" alt="Glenn Construction Website"></div>
+      <a href="#contact" class="featured-img"><img src="GC W DS.jpeg" alt="Glenn Construction Website"></a>
+      <a href="#contact" class="featured-img"><img src="GC W HP.jpeg" alt="Glenn Construction Website"></a>
+      <a href="#contact" class="featured-img"><img src="GC W RR.jpeg" alt="Glenn Construction Website"></a>
+      <a href="#contact" class="featured-img"><img src="GC W C 2.jpeg" alt="Glenn Construction Website"></a>
+      <a href="#contact" class="featured-img"><img src="GC W HP 2.jpeg" alt="Glenn Construction Website"></a>
+      <a href="#contact" class="featured-img"><img src="GC W RR Quote.jpg" alt="Glenn Construction Website"></a>
     </div>
     <div class="featured-content">
       <div class="featured-tag">Client Project</div>
