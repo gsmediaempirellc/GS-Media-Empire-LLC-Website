@@ -32,6 +32,9 @@
   .section-heading { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 4vw, 56px); font-weight: 400; line-height: 1.08; margin-bottom: 20px; }
   .section-heading em { font-style: italic; color: var(--gold); }
   .btn-gold { background: var(--gold); color: var(--white); padding: 15px 36px; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: all .25s; }
+  .hero-btn-row { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+  .back-link { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: color .2s; }
+  .back-link:hover { color: var(--black); }
   .btn-gold:hover { background: var(--pink); color: var(--black); transform: translateY(-2px); }
 
   .hero { padding: 100px 72px 80px; background: var(--white); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -179,7 +182,10 @@
     <a href="index.html#services" class="section-label" style="text-decoration:none;">Our Services</a>
     <h1>Get Your Business<br><em>Found Online.</em></h1>
     <p>From setting up your professional email to optimizing your Google Business Profile, we handle the behind-the-scenes tech and increase your search visibility so your business shows up when people are searching for what you offer.</p>
-    <a href="#contact" class="btn-gold">Get Set Up Today</a>
+    <div class="hero-btn-row">
+      <a href="#contact" class="btn-gold">Get Set Up Today</a>
+      <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
   </div>
   <div class="hero-boxes">
     <a href="#contact" class="hero-box">
