@@ -98,6 +98,12 @@
   .footer-service-btn { background: transparent; color: var(--gold); border: 1px solid var(--gold); padding: 8px 10px; border-radius: 2px; font-size: 15px; font-weight: 500; text-transform: uppercase; text-decoration: none; text-align: center; transition: all .25s; display: block; }
   .footer-service-btn:hover { background: var(--pink); border-color: var(--pink); color: var(--black); }
   .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-grid-main { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .footer-col-a { grid-column: 1; grid-row: 1; }
+  .footer-col-b { grid-column: 2; grid-row: 1; }
+  .footer-col-c { grid-column: 3; grid-row: 1; }
+  .footer-col-d { grid-column: 1/4; grid-row: 2; }
+  .footer-col-e { grid-column: 4; grid-row: 1/3; }
   .footer-copy { font-size: 14px; color: var(--white); }
   .footer-made { font-size: 14px; color: var(--white); }
 
@@ -126,6 +132,8 @@
     .contact { grid-template-columns: 1fr; padding: 56px 16px; gap: 40px; }
     .form-row { grid-template-columns: 1fr; }
     footer { padding: 40px 16px 28px; }
+    .footer-grid-main { grid-template-columns: 1fr !important; gap: 32px !important; }
+    .footer-col-a, .footer-col-b, .footer-col-c, .footer-col-d, .footer-col-e { grid-column: 1 !important; grid-row: auto !important; }
   }
 </style>
 </head>
@@ -282,16 +290,18 @@
       <a href="mailto:gracie@gsmediaempirellc.com" class="contact-item"><span class="icon">✉</span> gracie@gsmediaempirellc.com</a>
     </div>
   </div>
-  <div class="contact-form">
+  <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="f1645cff-e63a-42ea-9f84-6b74090fa7f0">
+    <input type="hidden" name="subject" value="New Google & SEO Setup Inquiry from GS Media Empire Website">
     <div class="form-row">
-      <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane"></div>
-      <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+      <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="Jane" required></div>
+      <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith" required></div>
     </div>
-    <div class="form-group"><label>Email Address</label><input type="email" placeholder="jane@yourbusiness.com"></div>
-    <div class="form-group"><label>Business Name</label><input type="text" placeholder="Your Business LLC"></div>
+    <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="jane@yourbusiness.com" required></div>
+    <div class="form-group"><label>Business Name</label><input type="text" name="business_name" placeholder="Your Business LLC"></div>
     <div class="form-group">
       <label>What Do You Need?</label>
-      <select>
+      <select name="service_interested_in">
         <option value="">Select an option...</option>
         <option>Professional Email Setup</option>
         <option>Google Workspace Setup</option>
@@ -302,14 +312,14 @@
         <option>Full Setup Package</option>
       </select>
     </div>
-    <div class="form-group"><label>Tell Me About Your Business</label><textarea placeholder="Tell me about your business what you currently have set up and what you need help with..."></textarea></div>
-    <button class="form-submit">Send Message</button>
-  </div>
+    <div class="form-group"><label>Tell Me About Your Business</label><textarea name="message" placeholder="Tell me about your business what you currently have set up and what you need help with..." required></textarea></div>
+    <button type="submit" class="form-submit">Send Message</button>
+  </form>
 </section>
 
 <footer>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:1fr auto;gap:0 40px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.07);">
-    <div style="grid-column:1;grid-row:1;align-self:start;display:flex;flex-direction:column;">
+  <div class="footer-grid-main" style="grid-template-rows:1fr auto;gap:0 40px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.07);">
+    <div class="footer-col-a" style="align-self:start;display:flex;flex-direction:column;">
       <div class="footer-col-title">Contact</div>
       <div class="footer-list">
         <a href="tel:3073910650" class="footer-link"><span class="icon">📞</span> 307-391-0650</a>
@@ -317,24 +327,30 @@
         <span class="footer-link"><span class="icon">📍</span> Wyoming & Beyond</span>
       </div>
     </div>
-    <div style="grid-column:2;grid-row:1;align-self:start;display:flex;flex-direction:column;">
+    <div class="footer-col-b" style="align-self:start;display:flex;flex-direction:column;">
       <div class="footer-col-title">Our Socials</div>
       <div class="footer-list">
         <a href="https://www.instagram.com/gsmediaempirellc?igsh=MXJ0bzljYjRpOWJjaA==" target="_blank" class="footer-link"><img src="INSTA LOGO.jpeg" style="width:18px;height:18px;border-radius:4px;"> @gsmediaempirellc</a>
         <a href="https://www.facebook.com/profile.php?id=61584386363200" target="_blank" class="footer-link"><img src="FB LOGO.png" style="width:18px;height:18px;border-radius:50%;"> GS Media Empire LLC</a>
       </div>
-      <a href="#email-signup" style="font-family:'Playfair Display',serif;font-size:16px;color:var(--white);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:20px;display:block;text-decoration:none;transition:color .25s;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--white)'">Stay Connected & Never Miss an Update</a>
+      <a href="#subscribe-form" style="font-family:'Playfair Display',serif;font-size:16px;color:var(--white);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:20px;display:block;text-decoration:none;transition:color .25s;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--white)'">Stay Connected & Never Miss an Update</a>
     </div>
-    <div style="grid-column:3;grid-row:1;align-self:start;" class="footer-logo-wrap">
+    <div class="footer-col-c footer-logo-wrap" style="align-self:start;">
       <a href="index.html">
         <img src="LARGE GS MEDIA EMPIRE LLC LOGO.PNG" alt="GS Media Empire LLC" class="footer-logo-img">
       </a>
       <div class="footer-tagline">We turn clicks into loyal customers.<br>Wyoming-based, serving businesses everywhere.</div>
     </div>
-    <div style="grid-column:1/4;grid-row:2;align-self:end;padding-top:16px;">
-      <a href="#email-signup" style="display:block;width:100%;background:var(--pink);color:var(--black);padding:18px;border-radius:2px;font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;text-align:center;transition:all .25s;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--white)'" onmouseout="this.style.background='var(--pink)';this.style.color='var(--black)'">Subscribe</a>
+    <div class="footer-col-d" style="align-self:end;padding-top:16px;">
+      <form id="subscribe-form" action="https://gsmediaempirellc.us11.list-manage.com/subscribe/post?u=0f4767a2ba41844ead65eb0ab&id=4c972c1f1d&f_id=00b3d5e3f0" method="post" target="_blank" style="display:flex;width:100%;flex-wrap:wrap;gap:0;">
+        <input type="email" name="EMAIL" required placeholder="Your email address" style="flex:1;min-width:200px;padding:18px;border:none;border-radius:2px 0 0 2px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;">
+        <div aria-hidden="true" style="position:absolute;left:-5000px;">
+          <input type="text" name="b_0f4767a2ba41844ead65eb0ab_4c972c1f1d" tabindex="-1" value="">
+        </div>
+        <button type="submit" style="background:var(--pink);color:var(--black);padding:18px 32px;border:none;border-radius:0 2px 2px 0;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .25s;white-space:nowrap;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--white)'" onmouseout="this.style.background='var(--pink)';this.style.color='var(--black)'">Subscribe</button>
+      </form>
     </div>
-    <div style="grid-column:4;grid-row:1/3;align-self:start;">
+    <div class="footer-col-e" style="align-self:start;">
       <div class="footer-col-title">Services</div>
       <div class="footer-service-btns">
         <a href="photography.html" class="footer-service-btn">Photography</a>
