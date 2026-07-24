@@ -32,6 +32,9 @@
   .section-heading { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 4vw, 56px); font-weight: 400; line-height: 1.08; margin-bottom: 20px; }
   .section-heading em { font-style: italic; color: var(--gold); }
   .btn-gold { background: var(--gold); color: var(--white); padding: 15px 36px; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: all .25s; }
+  .hero-btn-row { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+  .back-link { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: color .2s; }
+  .back-link:hover { color: var(--black); }
   .btn-gold:hover { background: var(--pink); color: var(--black); transform: translateY(-2px); }
   .btn-pink { background: var(--pink); color: var(--black); padding: 15px 36px; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: all .25s; }
   .btn-pink:hover { background: var(--gold-lt); color: var(--white); transform: translateY(-2px); }
@@ -173,7 +176,10 @@
     <a href="index.html#services" class="section-label" style="text-decoration:none;">Our Services</a>
     <h1>A Brand That Makes<br>People <em>Remember You.</em></h1>
     <p>Your brand is more than a logo. It is the feeling people get when they find you online. We build brands that are consistent recognizable and impossible to forget.</p>
-    <a href="#contact" class="btn-gold">Start Your Brand</a>
+    <div class="hero-btn-row">
+      <a href="#contact" class="btn-gold">Start Your Brand</a>
+      <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
   </div>
   <div class="hero-img" style="border-radius:2px;height:560px;">
     <img src="Branding hero .JPG" alt="Branding & Identity">
