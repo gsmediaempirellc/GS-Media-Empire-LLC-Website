@@ -42,8 +42,8 @@
   .hero-img { border-radius: 2px; overflow: hidden; aspect-ratio: 4/3; }
   .hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
   .hero-img:hover img { transform: scale(1.04); }
-  .hero-img-tall { border-radius: 2px; overflow: hidden; aspect-ratio: 3/4; grid-row: span 2; }
-  .hero-img-tall img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero-img-tall { border-radius: 2px; overflow: hidden; aspect-ratio: 3/4; grid-row: span 2; background: var(--white); }
+  .hero-img-tall img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
   .services { padding: 100px 72px; background: #f9f9f9; }
   .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: rgba(201,138,26,.1); margin-top: 56px; }
@@ -203,9 +203,8 @@
     <p>No templates no shortcuts. Every site we build is completely custom designed to match your brand and turn clicks into loyal customers.</p>
     <a href="#contact" class="btn-gold">Start Your Project</a>
   </div>
-  <div class="hero-imgs">
-    <div class="hero-img-tall"><img src="Website design hero.PNG" alt="Website Design"></div>
-    <div class="hero-img" style="background:#f5f5f5;"></div>
+  <div class="hero-imgs" style="grid-template-columns:1fr;">
+    <div class="hero-img-tall" style="aspect-ratio:auto;height:560px;"><img src="Website design hero.PNG" alt="Website Design"></div>
   </div>
 </section>
 
