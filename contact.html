@@ -31,6 +31,11 @@
   .nav-cta:hover { background: var(--gold-lt) !important; }
 
   .section-label { font-size: 10px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+  .review-card { background: var(--white); padding: 40px 32px; text-align: left; border-bottom: 3px solid transparent; transition: all .3s; text-decoration: none; display: block; cursor: pointer; }
+  .review-card:hover { border-color: var(--gold); background: #fdf6ec; }
+  .review-stars { color: var(--gold); font-size: 15px; margin-bottom: 16px; letter-spacing: 2px; }
+  .review-quote { font-size: 15px; line-height: 1.75; color: #333; font-weight: 300; margin-bottom: 20px; }
+  .review-author { font-family: 'DM Serif Display', serif; font-size: 16px; font-style: italic; color: var(--black); }
   .section-heading { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 4vw, 56px); font-weight: 400; line-height: 1.08; margin-bottom: 20px; }
   .section-heading em { font-style: italic; color: var(--gold); }
 
@@ -126,6 +131,8 @@
     .contact-form { padding: 32px 16px; }
     .form-row { grid-template-columns: 1fr; }
     .faq-teaser { grid-template-columns: 1fr; padding: 60px 16px; }
+    .review-card { padding: 32px 20px; }
+    .review-grid { grid-template-columns: 1fr !important; }
     footer { padding: 40px 16px 28px; }
     .footer-grid-main { grid-template-columns: 1fr !important; gap: 32px !important; }
     .footer-col-a, .footer-col-b, .footer-col-c, .footer-col-d, .footer-col-e { grid-column: 1 !important; grid-row: auto !important; }
@@ -232,10 +239,24 @@
   </form>
 </section>
 
-<section style="padding:100px 72px;background:#f9f9f9;text-align:center;">
-  <div class="section-label">What Clients Are Saying</div>
-  <h2 class="section-heading">Loved <em>Working With Us?</em></h2>
-  <p style="font-size:16px;font-weight:300;line-height:1.8;color:#444;max-width:520px;margin:0 auto 44px;">We'd love to hear about your experience. Check out what other clients have said or leave one of your own.</p>
+<section style="padding:100px 72px;background:#FFF5FB;">
+  <div style="text-align:center;">
+    <div class="section-label">What Clients Are Saying</div>
+    <h2 class="section-heading">Loved <em>Working With Us?</em></h2>
+    <p style="font-size:16px;font-weight:300;line-height:1.8;color:#444;max-width:520px;margin:0 auto 44px;">We'd love to hear about your experience. Check out what other clients have said or leave one of your own.</p>
+  </div>
+  <div class="review-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(201,138,26,.1);max-width:900px;margin:0 auto 44px;">
+    <a href="https://g.page/r/CSVscCTJwKvMEBM/review" target="_blank" class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-quote">"I had such a great experience getting my senior pictures done with Gracie! She made me feel comfortable and confident the entire shoot, and the preview pics already look amazing. Can't wait for the results and our next sessions. Highly recommend her!"</div>
+      <div class="review-author">— Pyper H.</div>
+    </a>
+    <a href="https://g.page/r/CSVscCTJwKvMEBM/review" target="_blank" class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-quote">"The improvement in our social media presence has been tremendous. She brings a wealth of knowledge, creativity and fresh ideas to the table. Not only is Gracie incredibly professional, but she also genuinely cares about the success of her clients."</div>
+      <div class="review-author">— Caleb S., Blakeman Propane</div>
+    </a>
+  </div>
   <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
     <a href="https://g.page/r/CSVscCTJwKvMEBM/review" target="_blank" style="background:var(--gold);color:var(--white);padding:15px 36px;border-radius:2px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all .25s;">⭐ Leave a Review</a>
     <a href="https://g.page/r/CSVscCTJwKvMEBM" target="_blank" style="background:var(--white);color:var(--black);border:1px solid rgba(201,138,26,.25);padding:15px 36px;border-radius:2px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all .25s;">View Our Reviews →</a>
