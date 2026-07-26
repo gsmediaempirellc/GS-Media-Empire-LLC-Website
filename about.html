@@ -37,6 +37,9 @@
   .btn-gold:hover { background: var(--pink); color: var(--black); transform: translateY(-2px); }
   .btn-pink { background: var(--pink); color: var(--black); padding: 15px 36px; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: all .25s; }
   .btn-pink:hover { background: var(--gold-lt); color: var(--white); transform: translateY(-2px); }
+  .hero-btn-row { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .back-link { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: color .2s; }
+  .back-link:hover { color: var(--black); }
 
   /* HERO */
   .hero { padding: 100px 72px 80px; background: var(--white); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -56,15 +59,18 @@
   .stat-label { font-size: 14px; color: var(--black); font-weight: 300; line-height: 1.6; max-width: 180px; margin: 0 auto; }
 
   /* MINI REVIEWS */
-  .mini-reviews { padding: 48px 72px; background: var(--pink); display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .mini-reviews { padding: 56px 72px; background: #FDF1F7; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; transition: background .3s; }
+  .mini-reviews:hover { background: #FBE3EF; }
   .mini-reviews h2 { font-family: 'DM Serif Display', serif; font-size: clamp(24px, 2.6vw, 34px); font-weight: 400; color: var(--black); line-height: 1.15; }
   .mini-reviews h2 em { font-style: italic; color: var(--gold); }
-  .mini-reviews-quote { font-size: 15px; font-weight: 300; color: var(--black); line-height: 1.7; max-width: 480px; margin-top: 12px; }
-  .mini-reviews-quote span { display: block; margin-top: 8px; font-style: italic; font-weight: 700; }
+  .mini-reviews-card { background: var(--white); border-radius: 4px; padding: 28px 32px; max-width: 480px; box-shadow: 0 2px 16px rgba(0,0,0,.05); }
+  .mini-reviews-stars { color: var(--gold-lt); font-size: 16px; letter-spacing: 2px; margin-bottom: 14px; }
+  .mini-reviews-quote { font-size: 15px; font-weight: 300; color: var(--black); line-height: 1.7; }
+  .mini-reviews-quote span { display: block; margin-top: 14px; font-style: italic; font-weight: 700; }
   .mini-reviews-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-  .review-btn { border: 1px solid var(--black); color: var(--black); background: transparent; padding: 12px 28px; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: all .25s; }
-  .review-btn:hover { background: var(--gold); border-color: var(--gold); color: var(--white); }
-  .review-btn-solid { background: var(--gold); color: var(--white); border: 1px solid var(--gold); }
+  .review-btn { border: 1px solid var(--black); color: var(--black); background: transparent; padding: 13px 28px; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all .25s; }
+  .review-btn:hover { background: var(--gold-lt); border-color: var(--gold-lt); color: var(--white); }
+  .review-btn-solid { background: var(--gold-lt); color: var(--white); border-color: var(--gold-lt); }
   .review-btn-solid:hover { background: var(--pink); border-color: var(--pink); color: var(--black); }
 
   /* MISSION */
@@ -197,7 +203,10 @@
     <p>I started GS Media Empire LLC because I know that behind every business is someone working incredibly hard and they deserve an online presence that actually reflects that.</p>
     <p>Every client gets a strategy built specifically for their brand, their audience, and their goals. Whether you need help with your social media without me taking it over completely, a website built or managed, SEO support, or a photographer for your next project, I have got you.</p>
     <br>
-    <a href="contact.html" class="btn-gold">Work With Me</a>
+    <div class="hero-btn-row">
+      <a href="contact.html" class="btn-gold">Work With Me</a>
+      <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
   </div>
   <div class="hero-img">
     <a href="contact.html" style="display:block;">
@@ -313,12 +322,16 @@
 <!-- MINI REVIEWS -->
 <section class="mini-reviews">
   <div>
+    <div class="section-label">About GS Media Empire LLC</div>
     <h2>Loved by the <em>Businesses I Work With.</em></h2>
-    <p style="font-size:15px;font-weight:300;color:var(--black);line-height:1.7;max-width:480px;margin-top:12px;">"We recently reached the six month mark of working together and the improvement in our social media presence has been tremendous." <span style="font-weight:600;">— Caleb Simons, Blakeman Propane</span></p>
+  </div>
+  <div class="mini-reviews-card">
+    <div class="mini-reviews-stars">★★★★★</div>
+    <p class="mini-reviews-quote">"We recently reached the six month mark of working together and the improvement in our social media presence has been tremendous."<span>— Caleb S., Blakeman Propane</span></p>
   </div>
   <div class="mini-reviews-btns">
-    <a href="contact.html#reviews" class="review-btn">Leave a Review</a>
-    <a href="contact.html#reviews" class="review-btn">View Reviews</a>
+    <a href="contact.html#reviews" class="review-btn review-btn-solid">★ Leave a Review</a>
+    <a href="contact.html#reviews" class="review-btn">View Reviews →</a>
   </div>
 </section>
 
