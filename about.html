@@ -37,7 +37,7 @@
   .btn-gold:hover { background: var(--pink); color: var(--black); transform: translateY(-2px); }
   .btn-pink { background: var(--pink); color: var(--black); padding: 15px 36px; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: all .25s; }
   .btn-pink:hover { background: var(--gold-lt); color: var(--white); transform: translateY(-2px); }
-  .hero-btn-row { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .hero-btn-row { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
   .back-link { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: color .2s; }
   .back-link:hover { color: var(--black); }
 
@@ -59,14 +59,15 @@
   .stat-label { font-size: 14px; color: var(--black); font-weight: 300; line-height: 1.6; max-width: 180px; margin: 0 auto; }
 
   /* MINI REVIEWS */
-  .mini-reviews { padding: 56px 72px; background: #FDF1F7; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; transition: background .3s; }
+  .mini-reviews { padding: 64px 72px; background: #FDF1F7; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; transition: background .3s; }
   .mini-reviews:hover { background: #FBE3EF; }
-  .mini-reviews h2 { font-family: 'DM Serif Display', serif; font-size: clamp(24px, 2.6vw, 34px); font-weight: 400; color: var(--black); line-height: 1.15; }
+  .mini-reviews h2 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 3vw, 40px); font-weight: 400; color: var(--black); line-height: 1.15; margin-top: 6px; }
   .mini-reviews h2 em { font-style: italic; color: var(--gold); }
-  .mini-reviews-card { background: var(--white); border-radius: 4px; padding: 28px 32px; max-width: 480px; box-shadow: 0 2px 16px rgba(0,0,0,.05); }
-  .mini-reviews-stars { color: var(--gold-lt); font-size: 16px; letter-spacing: 2px; margin-bottom: 14px; }
-  .mini-reviews-quote { font-size: 15px; font-weight: 300; color: var(--black); line-height: 1.7; }
-  .mini-reviews-quote span { display: block; margin-top: 14px; font-style: italic; font-weight: 700; }
+  .mini-reviews-left { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
+  .mini-reviews-card { background: var(--white); border-radius: 4px; padding: 40px 44px; box-shadow: 0 2px 16px rgba(0,0,0,.05); }
+  .mini-reviews-stars { color: var(--gold-lt); font-size: 20px; letter-spacing: 3px; margin-bottom: 18px; }
+  .mini-reviews-quote { font-size: 17px; font-weight: 300; color: var(--black); line-height: 1.75; }
+  .mini-reviews-quote span { display: block; margin-top: 18px; font-style: italic; font-weight: 700; font-size: 16px; }
   .mini-reviews-btns { display: flex; gap: 12px; flex-wrap: wrap; }
   .review-btn { border: 1px solid var(--black); color: var(--black); background: transparent; padding: 13px 28px; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all .25s; }
   .review-btn:hover { background: var(--gold-lt); border-color: var(--gold-lt); color: var(--white); }
