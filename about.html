@@ -48,12 +48,20 @@
   .hero-img::after { content: ''; position: absolute; bottom: -16px; right: -16px; width: 80px; height: 80px; background: var(--pink); border-radius: 2px; z-index: -1; }
 
   /* STATS */
-  .stats { display: grid; grid-template-columns: repeat(3,1fr); padding: 80px 72px; background: #f9f9f9; border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold); }
-  .stat { padding: 0 48px; border-right: 1px solid rgba(201,138,26,.15); text-align: center; text-decoration: none; color: inherit; display: block; }
-  .stat:first-child { padding-left: 48px; }
+  .stats { display: grid; grid-template-columns: repeat(5,1fr); padding: 80px 72px; background: #f9f9f9; border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold); }
+  .stat { padding: 0 24px; border-right: 1px solid rgba(201,138,26,.15); text-align: center; text-decoration: none; color: inherit; display: block; }
+  .stat:first-child { padding-left: 24px; }
   .stat:last-child { border-right: none; }
-  .stat-num { font-family: 'DM Serif Display', serif; font-size: clamp(72px, 9vw, 120px); line-height: 1; margin-bottom: 12px; background: linear-gradient(135deg, var(--pink), var(--gold-lt)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .stat-label { font-size: 16px; color: var(--black); font-weight: 300; line-height: 1.6; max-width: 200px; margin: 0 auto; }
+  .stat-num { font-family: 'DM Serif Display', serif; font-size: clamp(48px, 5.5vw, 76px); line-height: 1; margin-bottom: 12px; background: linear-gradient(135deg, var(--pink), var(--gold-lt)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .stat-label { font-size: 14px; color: var(--black); font-weight: 300; line-height: 1.6; max-width: 180px; margin: 0 auto; }
+
+  /* MINI REVIEWS */
+  .mini-reviews { padding: 48px 72px; background: var(--pink); display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .mini-reviews h2 { font-family: 'DM Serif Display', serif; font-size: clamp(24px, 2.6vw, 34px); font-weight: 400; color: var(--black); line-height: 1.15; }
+  .mini-reviews h2 em { font-style: italic; color: var(--gold); }
+  .mini-reviews-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .review-btn { border: 1px solid var(--black); color: var(--black); background: transparent; padding: 12px 28px; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: all .25s; }
+  .review-btn:hover { background: var(--gold); border-color: var(--gold); color: var(--white); }
 
   /* MISSION */
   .mission { padding: 100px 72px; background: var(--black); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -84,11 +92,10 @@
 
   /* FOOTER */
   footer { background: var(--black); border-top: 1px solid rgba(255,255,255,.07); padding: 60px 72px 36px; display: flex; flex-direction: column; gap: 40px; }
-  .footer-top { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.07); align-items: start; }
   .footer-logo-wrap { display: flex; flex-direction: column; align-items: flex-start; }
   .footer-logo-img { height: 80px; width: auto; margin-bottom: 12px; display: block; }
   .footer-tagline { font-size: 15px; color: var(--white); font-weight: 300; line-height: 1.7; }
-  .footer-col-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--white); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; }
+  .footer-col-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; }
   .footer-list { display: flex; flex-direction: column; gap: 14px; }
   .footer-link { font-size: 16px; color: var(--white); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color .2s; }
   .footer-link:hover { color: var(--pink); }
@@ -96,10 +103,15 @@
   .footer-service-btns { display: flex; flex-direction: column; gap: 8px; }
   .footer-service-btn { background: transparent; color: var(--gold); border: 1px solid var(--gold); padding: 8px 10px; border-radius: 2px; font-size: 15px; font-weight: 500; text-transform: uppercase; text-decoration: none; text-align: center; transition: all .25s; display: block; }
   .footer-service-btn:hover { background: var(--pink); border-color: var(--pink); color: var(--black); }
-  .email-signup-btn { display: block; margin-top: 20px; background: var(--pink); color: var(--black); padding: 12px 24px; border-radius: 2px; font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: all .25s; text-align: center; }
-  .email-signup-btn:hover { background: var(--gold); color: var(--white); }
   .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-grid-main { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .footer-col-a { grid-column: 1; grid-row: 1; }
+  .footer-col-b { grid-column: 2; grid-row: 1; }
+  .footer-col-c { grid-column: 3; grid-row: 1; }
+  .footer-col-d { grid-column: 1/4; grid-row: 2; }
+  .footer-col-e { grid-column: 4; grid-row: 1/3; }
   .footer-copy { font-size: 14px; color: var(--white); }
+  .footer-made { font-size: 14px; color: var(--white); }
 
   /* HAMBURGER */
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 200; padding: 4px; }
@@ -125,12 +137,13 @@
     .stat-num { font-size: clamp(64px, 18vw, 90px); text-align: center; }
     .stat-label { text-align: center; }
     .mission { grid-template-columns: 1fr; padding: 60px 16px; gap: 48px; }
+    .mini-reviews { padding: 40px 16px; flex-direction: column; text-align: center; }
     .services-teaser { padding: 60px 16px; }
     .services-grid { grid-template-columns: 1fr; }
     .cta { padding: 64px 16px; }
     footer { padding: 40px 16px 28px; }
-    .footer-top { grid-template-columns: 1fr; gap: 32px; }
-    .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
+    .footer-grid-main { grid-template-columns: 1fr !important; gap: 32px !important; }
+    .footer-col-a, .footer-col-b, .footer-col-c, .footer-col-d, .footer-col-e { grid-column: 1 !important; grid-row: auto !important; }
   }
 </style>
 </head>
@@ -178,7 +191,7 @@
     <h1>Hi, I'm <em>Gracie.</em></h1>
     <p>I am a Wyoming-based social media manager, photographer, and web designer who genuinely loves helping businesses grow.</p>
     <p>I started GS Media Empire LLC because I know that behind every business is someone working incredibly hard and they deserve an online presence that actually reflects that.</p>
-    <p>Every client gets a strategy built specifically for their brand, their audience, and their goals. Whether you need someone to take over your social media, build your website, or both I have got you.</p>
+    <p>Every client gets a strategy built specifically for their brand, their audience, and their goals. Whether you need help with your social media without me taking it over completely, a website built or managed, SEO support, or a photographer for your next project, I have got you.</p>
     <br>
     <a href="contact.html" class="btn-gold">Work With Me</a>
   </div>
@@ -198,9 +211,26 @@
     <div class="stat-label">Average views in the first three months</div>
   </a>
   <a href="contact.html" class="stat">
+    <div class="stat-num">2K+</div>
+    <div class="stat-label">Google Business profile views</div>
+  </a>
+  <a href="contact.html" class="stat">
+    <div class="stat-num">7K+</div>
+    <div class="stat-label">Content interactions in 6 months</div>
+  </a>
+  <a href="contact.html" class="stat">
     <div class="stat-num">5+</div>
     <div class="stat-label">Wyoming businesses grown and counting</div>
   </a>
+</section>
+
+<!-- MINI REVIEWS -->
+<section class="mini-reviews">
+  <h2>Loved by the <em>Businesses I Work With.</em></h2>
+  <div class="mini-reviews-btns">
+    <a href="contact.html#reviews" class="review-btn">Leave a Review</a>
+    <a href="contact.html#reviews" class="review-btn">View Reviews</a>
+  </div>
 </section>
 
 <!-- MISSION -->
@@ -208,7 +238,7 @@
   <div>
     <div class="section-label" style="color:var(--gold-lt);">My Mission</div>
     <h2>Built for Businesses<br>That Want to <em>Grow.</em></h2>
-    <p>Think of me as your behind the scenes marketing team minus the big agency price tag. I do it all under one roof so you do not have to juggle a dozen vendors.</p>
+    <p>Think of me as your behind-the-scenes marketing team, minus the big agency price tag. I do it all under one roof, so you do not have to juggle a dozen vendors.</p>
     <a href="contact.html" class="btn-pink" style="margin-top:12px;">Let's Work Together</a>
   </div>
   <div class="mission-values">
@@ -216,28 +246,28 @@
       <div class="value-icon">👑</div>
       <div>
         <div class="value-title">Quality over everything</div>
-        <div class="value-desc">Every piece of content every photo every website is created with care and intention. Nothing leaves my hands unless I am proud of it.</div>
+        <div class="value-desc">Every piece of content, every photo, every website is created with care and intention. Nothing leaves my hands unless I am proud of it.</div>
       </div>
     </div>
     <div class="mission-value">
       <div class="value-icon">🎯</div>
       <div>
         <div class="value-title">Results that actually matter</div>
-        <div class="value-desc">Pretty content is great but content that converts is better. Everything I do is built to get your business real results.</div>
+        <div class="value-desc">Pretty content is great, but content that converts is better. Everything I do is built to get your business real results.</div>
       </div>
     </div>
     <div class="mission-value">
       <div class="value-icon">🤝</div>
       <div>
         <div class="value-title">You are never just a client</div>
-        <div class="value-desc">I genuinely care about the businesses I work with. Your success is my success and I show up for you like it is my own business on the line.</div>
+        <div class="value-desc">I genuinely care about the businesses I work with. Your success is my success, and I show up for you like it is my own business on the line.</div>
       </div>
     </div>
     <div class="mission-value">
       <div class="value-icon">✨</div>
       <div>
         <div class="value-title">Tailored to you always</div>
-        <div class="value-desc">Every strategy every package every plan is built specifically for your brand your audience and your goals. Always.</div>
+        <div class="value-desc">Every strategy, every package, every plan is built specifically for your brand, your audience, and your goals. Always.</div>
       </div>
     </div>
   </div>
@@ -285,43 +315,54 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-top">
-    <div>
+  <div class="footer-grid-main" style="grid-template-rows:1fr auto;gap:0 40px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.07);">
+    <div class="footer-col-a" style="align-self:start;display:flex;flex-direction:column;">
       <div class="footer-col-title">Contact</div>
       <div class="footer-list">
         <a href="tel:3073910650" class="footer-link"><span class="icon">📞</span> 307-391-0650</a>
         <a href="mailto:gracie@gsmediaempirellc.com" class="footer-link"><span class="icon">✉</span> gracie@gsmediaempirellc.com</a>
         <span class="footer-link"><span class="icon">📍</span> Wyoming & Beyond</span>
       </div>
-      <a href="#" class="email-signup-btn">Subscribe</a>
     </div>
-    <div>
+    <div class="footer-col-b" style="align-self:start;display:flex;flex-direction:column;">
       <div class="footer-col-title">Our Socials</div>
       <div class="footer-list">
         <a href="https://www.instagram.com/gsmediaempirellc?igsh=MXJ0bzljYjRpOWJjaA==" target="_blank" class="footer-link"><img src="INSTA LOGO.jpeg" style="width:18px;height:18px;border-radius:4px;"> @gsmediaempirellc</a>
         <a href="https://www.facebook.com/profile.php?id=61584386363200" target="_blank" class="footer-link"><img src="FB LOGO.png" style="width:18px;height:18px;border-radius:50%;"> GS Media Empire LLC</a>
       </div>
+      <a href="#subscribe-form" style="font-family:'Playfair Display',serif;font-size:16px;color:var(--white);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:20px;display:block;text-decoration:none;transition:color .25s;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--white)'">Stay Connected & Never Miss an Update</a>
     </div>
-    <div class="footer-logo-wrap">
+    <div class="footer-col-c footer-logo-wrap" style="align-self:start;">
       <a href="index.html">
         <img src="LARGE GS MEDIA EMPIRE LLC LOGO.PNG" alt="GS Media Empire LLC" class="footer-logo-img">
       </a>
       <div class="footer-tagline">We turn clicks into loyal customers.<br>Wyoming-based, serving businesses everywhere.</div>
     </div>
-    <div>
+    <div class="footer-col-d" style="align-self:end;padding-top:16px;">
+      <form id="subscribe-form" action="https://gsmediaempirellc.us11.list-manage.com/subscribe/post?u=0f4767a2ba41844ead65eb0ab&id=4c972c1f1d&f_id=00b3d5e3f0" method="post" target="_blank" style="display:flex;width:100%;flex-wrap:wrap;gap:0;">
+        <input type="email" name="EMAIL" required placeholder="Your email address" style="flex:1;min-width:200px;padding:18px;border:none;border-radius:2px 0 0 2px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;">
+        <div aria-hidden="true" style="position:absolute;left:-5000px;">
+          <input type="text" name="b_0f4767a2ba41844ead65eb0ab_4c972c1f1d" tabindex="-1" value="">
+        </div>
+        <button type="submit" style="background:var(--pink);color:var(--black);padding:18px 32px;border:none;border-radius:0 2px 2px 0;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .25s;white-space:nowrap;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--white)'" onmouseout="this.style.background='var(--pink)';this.style.color='var(--black)'">Subscribe</button>
+      </form>
+    </div>
+    <div class="footer-col-e" style="align-self:start;">
       <div class="footer-col-title">Services</div>
       <div class="footer-service-btns">
         <a href="photography.html" class="footer-service-btn">Photography</a>
         <a href="social-media.html" class="footer-service-btn">Social Media</a>
         <a href="website-design.html" class="footer-service-btn">Website Design</a>
         <a href="branding.html" class="footer-service-btn">Branding</a>
-        <a href="google-setup.html" class="footer-service-btn">Google Setup</a>
+        <a href="google-setup.html" class="footer-service-btn">Google & SEO Setup</a>
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:20px;">
     <div class="footer-copy">© 2026 GS Media Empire LLC All Rights Reserved.</div>
-    <div class="footer-copy">Designed & Built by GS Media Empire LLC</div>
+    <a href="privacy-policy.html" style="font-size:14px;color:var(--white);text-decoration:none;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--white)'">Privacy Policy</a>
+    <a href="terms.html" style="font-size:14px;color:var(--white);text-decoration:none;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--white)'">Terms of Service</a>
+    <div class="footer-made">Designed & Built by GS Media Empire LLC</div>
   </div>
 </footer>
 
