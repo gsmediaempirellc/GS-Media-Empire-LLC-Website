@@ -106,7 +106,7 @@
   .footer-logo-wrap { display: flex; flex-direction: column; align-items: flex-start; }
   .footer-logo-img { height: 80px; width: auto; margin-bottom: 12px; display: block; }
   .footer-tagline { font-size: 15px; color: var(--white); font-weight: 300; line-height: 1.7; }
-  .footer-col-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; min-height: 52px; }
+  .footer-col-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; height: 56px; display: flex; align-items: flex-start; }
   .footer-list { display: flex; flex-direction: column; gap: 14px; }
   .footer-link { font-size: 16px; color: var(--white); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color .2s; }
   .footer-link:hover { color: var(--pink); }
@@ -157,7 +157,7 @@
     footer { padding: 40px 16px 28px; }
     .footer-grid-main { grid-template-columns: 1fr !important; gap: 32px !important; }
     .footer-col-a, .footer-col-b, .footer-col-c, .footer-col-d, .footer-col-e { grid-column: 1 !important; grid-row: auto !important; }
-    .footer-col-title { min-height: 0 !important; }
+    .footer-col-title { min-height: 0 !important; height: auto !important; }
   }
 </style>
 </head>
@@ -356,7 +356,7 @@
       <div class="footer-list">
         <a href="https://www.instagram.com/gsmediaempirellc?igsh=MXJ0bzljYjRpOWJjaA==" target="_blank" class="footer-link"><img src="INSTA LOGO.jpeg" style="width:18px;height:18px;border-radius:4px;"> @gsmediaempirellc</a>
         <a href="https://www.facebook.com/profile.php?id=61584386363200" target="_blank" class="footer-link"><img src="FB LOGO.png" style="width:18px;height:18px;border-radius:50%;"> GS Media Empire LLC</a>
-        <a href="https://www.tiktok.com/@gsmediaempirellc?_r=1&_t=ZT-98MsESz2zks" target="_blank" class="footer-link"><img src="Tik%20Tok%20.PNG" style="width:18px;height:18px;border-radius:50%;"> @gsmediaempirellc</a>
+        <a href="https://www.tiktok.com/@gsmediaempirellc?_r=1&_t=ZT-98MsESz2zks" target="_blank" class="footer-link"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;overflow:hidden;flex-shrink:0;"><img src="Tik%20Tok%20.PNG" style="width:100%;height:100%;object-fit:cover;transform:scale(1.18);display:block;"></span> @gsmediaempirellc</a>
       </div>
     </div>
     <div class="footer-col-c" style="align-self:start;display:flex;flex-direction:column;">
@@ -376,7 +376,7 @@
         <button type="submit" style="background:var(--pink);color:var(--black);padding:18px 32px;border:none;border-radius:0 2px 2px 0;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .25s;white-space:nowrap;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--white)'" onmouseout="this.style.background='var(--pink)';this.style.color='var(--black)'">Subscribe</button>
       </form>
     </div>
-    <div class="footer-col-e" style="align-self:start;">
+    <div class="footer-col-e" style="align-self:stretch;display:flex;flex-direction:column;">
       <div class="footer-col-title">Services</div>
       <div class="footer-service-btns">
         <a href="photography.html" class="footer-service-btn">Photography</a>
@@ -385,7 +385,7 @@
         <a href="branding.html" class="footer-service-btn">Branding</a>
         <a href="google-setup.html" class="footer-service-btn">Google & SEO Setup</a>
       </div>
-      <a href="index.html" style="font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-lt);text-decoration:none;margin-top:16px;display:inline-flex;align-items:center;gap:8px;transition:color .2s;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--gold-lt)'">← Back to Home</a>
+      <a href="index.html" style="font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-lt);text-decoration:none;margin-top:auto;padding-top:16px;display:inline-flex;align-items:center;gap:8px;transition:color .2s;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--gold-lt)'">← Back to Home</a>
     </div>
   </div>
   <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:20px;">
