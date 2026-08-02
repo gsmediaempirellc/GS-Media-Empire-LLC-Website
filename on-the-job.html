@@ -38,7 +38,7 @@
   .btn-gold:hover { background: var(--pink); color: var(--black); transform: translateY(-2px); }
   .back-link { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: color .2s; }
   .back-link:hover { color: var(--black); }
-  .hero-img { position: relative; background: var(--white); }
+  .hero-img { position: relative; background: var(--white); display: block; text-decoration: none; }
   .hero-img img { width: 100%; height: 560px; object-fit: cover; object-position: top; border-radius: 2px; display: block; }
   .hero-img::after { content: ''; position: absolute; bottom: -16px; right: -16px; width: 80px; height: 80px; background: var(--pink); border-radius: 2px; z-index: -1; }
 
@@ -49,7 +49,7 @@
   .grid-header p { font-size: 15px; font-weight: 300; line-height: 1.8; color: #444; max-width: 560px; }
 
   .photo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-  .photo-card { position: relative; aspect-ratio: 3/4; overflow: hidden; background: var(--white); border-radius: 4px; border: 1px solid rgba(201,138,26,.12); }
+  .photo-card { position: relative; aspect-ratio: 3/4; overflow: hidden; background: var(--white); border-radius: 4px; border: 1px solid rgba(201,138,26,.12); display: block; text-decoration: none; cursor: pointer; }
   .photo-card img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
 
   .photo-card-soon { aspect-ratio: 3/4; background: var(--pink); border: none; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px; text-align: center; }
@@ -67,7 +67,7 @@
   .footer-logo-wrap { display: flex; flex-direction: column; align-items: flex-start; }
   .footer-logo-img { height: 80px; width: auto; margin-bottom: 12px; display: block; }
   .footer-tagline { font-size: 15px; color: var(--white); font-weight: 300; line-height: 1.7; }
-  .footer-col-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; }
+  .footer-col-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; height: 64px; display: flex; align-items: flex-start; }
   .footer-list { display: flex; flex-direction: column; gap: 14px; }
   .footer-link { font-size: 16px; color: var(--white); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color .2s; }
   .footer-link:hover { color: var(--pink); }
@@ -107,6 +107,8 @@
     footer { padding: 40px 16px 28px; }
     .footer-grid-main { grid-template-columns: 1fr !important; gap: 32px !important; }
     .footer-col-a, .footer-col-b, .footer-col-c, .footer-col-d, .footer-col-e { grid-column: 1 !important; grid-row: auto !important; }
+    .footer-col-title { min-height: 0 !important; height: auto !important; }
+    .footer-col-d a[href="#subscribe-form"] { white-space: normal !important; }
   }
 </style>
 </head>
@@ -157,9 +159,9 @@
       <a href="photography.html" class="back-link">← Back to Photography</a>
     </div>
   </div>
-  <div class="hero-img">
-    <img src="On the job hero image .jpg" alt="Employee On The Job">
-  </div>
+  <a href="contact.html" class="hero-img">
+    <img fetchpriority="high" decoding="async" src="On the job hero image .jpg" alt="Employee On The Job">
+  </a>
 </section>
 
 <section class="grid-section">
@@ -170,15 +172,15 @@
   </div>
 
   <div class="photo-grid">
-    <div class="photo-card">
-      <img src="BPI Photo 1.jpg" alt="Employee On The Job">
-    </div>
-    <div class="photo-card">
-      <img src="BPI Photo 3.JPG" alt="Employee On The Job">
-    </div>
-    <div class="photo-card">
-      <img src="BPI Photo 2.jpg" alt="Employee On The Job">
-    </div>
+    <a href="contact.html" class="photo-card">
+      <img decoding="async" src="BPI Photo 1.jpg" alt="Employee On The Job">
+    </a>
+    <a href="contact.html" class="photo-card">
+      <img decoding="async" src="BPI Photo 3.JPG" alt="Employee On The Job">
+    </a>
+    <a href="contact.html" class="photo-card">
+      <img decoding="async" src="BPI Photo 2.jpg" alt="Employee On The Job">
+    </a>
     <div class="photo-card-soon">
       <div class="soon-icon">📷</div>
       <p>More Coming Soon</p>
@@ -208,16 +210,18 @@
       <div class="footer-list">
         <a href="https://www.instagram.com/gsmediaempirellc?igsh=MXJ0bzljYjRpOWJjaA==" target="_blank" class="footer-link"><img src="INSTA LOGO.jpeg" style="width:18px;height:18px;border-radius:4px;"> @gsmediaempirellc</a>
         <a href="https://www.facebook.com/profile.php?id=61584386363200" target="_blank" class="footer-link"><img src="FB LOGO.png" style="width:18px;height:18px;border-radius:50%;"> GS Media Empire LLC</a>
+        <a href="https://www.tiktok.com/@gsmediaempirellc?_r=1&_t=ZT-98MsESz2zks" target="_blank" class="footer-link"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;overflow:hidden;flex-shrink:0;"><img loading="lazy" decoding="async" src="Tik%20Tok%20.PNG" style="width:100%;height:100%;object-fit:cover;transform:scale(1.18);display:block;"></span> @gsmediaempirellc</a>
       </div>
-      <a href="#subscribe-form" style="font-family:'Playfair Display',serif;font-size:16px;color:var(--white);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:20px;display:block;text-decoration:none;transition:color .25s;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--white)'">Stay Connected & Never Miss an Update</a>
     </div>
-    <div class="footer-col-c footer-logo-wrap" style="align-self:start;">
-      <a href="index.html">
-        <img src="LARGE GS MEDIA EMPIRE LLC LOGO.PNG" alt="GS Media Empire LLC" class="footer-logo-img">
-      </a>
-      <div class="footer-tagline">We turn clicks into loyal customers.<br>Wyoming-based, serving businesses everywhere.</div>
+    <div class="footer-col-c" style="align-self:start;display:flex;flex-direction:column;">
+      <div class="footer-col-title">Photography Socials</div>
+      <div class="footer-list">
+        <a href="https://www.instagram.com/gsmediaempirellc.photography?igsh=NWw3NzRlNW5hM2F4&utm_source=qr" target="_blank" class="footer-link"><img src="INSTA LOGO.jpeg" style="width:18px;height:18px;border-radius:4px;"> @gsmediaempirellc.photography</a>
+        <a href="https://www.facebook.com/profile.php?id=61592109577116" target="_blank" class="footer-link"><img src="FB LOGO.png" style="width:18px;height:18px;border-radius:50%;"> GS Media Empire LLC Photography</a>
+      </div>
     </div>
     <div class="footer-col-d" style="align-self:end;padding-top:16px;">
+      <a href="#subscribe-form" onclick="highlightSubscribe(); return false;" style="font-family:'Playfair Display',serif;font-size:24px;color:var(--white);font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:18px;display:block;text-decoration:none;white-space:nowrap;transition:color .25s;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--white)'">Stay Connected & Never Miss an Update</a>
       <form id="subscribe-form" action="https://gsmediaempirellc.us11.list-manage.com/subscribe/post?u=0f4767a2ba41844ead65eb0ab&id=4c972c1f1d&f_id=00b3d5e3f0" method="post" target="_blank" style="display:flex;width:100%;flex-wrap:wrap;gap:0;">
         <input type="email" name="EMAIL" required placeholder="Your email address" style="flex:1;min-width:200px;padding:18px;border:none;border-radius:2px 0 0 2px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;">
         <div aria-hidden="true" style="position:absolute;left:-5000px;">
@@ -226,7 +230,7 @@
         <button type="submit" style="background:var(--pink);color:var(--black);padding:18px 32px;border:none;border-radius:0 2px 2px 0;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .25s;white-space:nowrap;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--white)'" onmouseout="this.style.background='var(--pink)';this.style.color='var(--black)'">Subscribe</button>
       </form>
     </div>
-    <div class="footer-col-e" style="align-self:start;">
+    <div class="footer-col-e" style="align-self:stretch;display:flex;flex-direction:column;">
       <div class="footer-col-title">Services</div>
       <div class="footer-service-btns">
         <a href="photography.html" class="footer-service-btn">Photography</a>
@@ -235,6 +239,7 @@
         <a href="branding.html" class="footer-service-btn">Branding</a>
         <a href="google-setup.html" class="footer-service-btn">Google & SEO Setup</a>
       </div>
+      <a href="index.html" style="font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-lt);text-decoration:none;margin-top:auto;padding-top:16px;display:inline-flex;align-items:center;gap:8px;transition:color .2s;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--gold-lt)'">← Back to Home</a>
     </div>
   </div>
   <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:20px;">
@@ -248,6 +253,21 @@
 <script>
   function toggleMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function highlightSubscribe() {
+    var input = document.querySelector('#subscribe-form input[name=EMAIL]');
+    if (!input) return;
+    input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    input.style.transition = 'box-shadow .3s, border-color .3s';
+    input.style.boxShadow = '0 0 0 3px var(--pink)';
+    input.style.borderColor = 'var(--pink)';
+    setTimeout(function() {
+      input.focus();
+    }, 350);
+    setTimeout(function() {
+      input.style.boxShadow = '';
+      input.style.borderColor = '';
+    }, 1800);
   }
 </script>
 </body>
