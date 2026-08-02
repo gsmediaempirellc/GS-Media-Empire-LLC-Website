@@ -79,7 +79,7 @@
   .footer-logo-wrap { display: flex; flex-direction: column; align-items: flex-start; }
   .footer-logo-img { height: 80px; width: auto; margin-bottom: 12px; display: block; }
   .footer-tagline { font-size: 15px; color: var(--white); font-weight: 300; line-height: 1.7; }
-  .footer-col-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; }
+  .footer-col-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; height: 64px; display: flex; align-items: flex-start; }
   .footer-list { display: flex; flex-direction: column; gap: 14px; }
   .footer-link { font-size: 16px; color: var(--white); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color .2s; }
   .footer-link:hover { color: var(--pink); }
@@ -121,6 +121,8 @@
     footer { padding: 40px 16px 28px; }
     .footer-grid-main { grid-template-columns: 1fr !important; gap: 32px !important; }
     .footer-col-a, .footer-col-b, .footer-col-c, .footer-col-d, .footer-col-e { grid-column: 1 !important; grid-row: auto !important; }
+    .footer-col-title { min-height: 0 !important; height: auto !important; }
+    .footer-col-d a[href="#subscribe-form"] { white-space: normal !important; }
   }
 </style>
 </head>
@@ -169,7 +171,7 @@
     <a href="#booking" class="btn-gold">Book a Session</a>
   </div>
   <div class="hero-img">
-    <img src="Pyper edited-12.jpg" alt="GS Media Empire Photography">
+    <img fetchpriority="high" decoding="async" src="Pyper edited-12.jpg" alt="GS Media Empire Photography">
   </div>
 </section>
 
@@ -190,7 +192,7 @@
     <a href="coming-soon.html" style="aspect-ratio:3/2;background:var(--pink);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;text-align:center;text-decoration:none;"><div style="font-size:28px;">🌸</div><div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--black);font-style:italic;">Families</div><div style="font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);">Coming Soon</div></a>
     <a href="coming-soon.html" style="aspect-ratio:3/2;background:var(--pink);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;text-align:center;text-decoration:none;"><div style="font-size:28px;">💛</div><div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--black);font-style:italic;">Couples</div><div style="font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);">Coming Soon</div></a>
     <a href="seniors.html" style="aspect-ratio:3/2;border-radius:2px;position:relative;overflow:hidden;text-decoration:none;display:block;">
-      <img src="Pyper edited-30.jpg" alt="Senior Session" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block;">
+      <img loading="lazy" decoding="async" src="Pyper edited-30.jpg" alt="Senior Session" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block;">
       <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.15) 55%,transparent 100%);display:flex;align-items:flex-end;padding:18px;">
         <div>
           <div style="font-family:'DM Serif Display',serif;font-size:18px;color:#fff;font-style:italic;">Seniors</div>
@@ -200,7 +202,7 @@
     </a>
     <a href="coming-soon.html" style="aspect-ratio:3/2;background:var(--pink);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;text-align:center;text-decoration:none;"><div style="font-size:28px;">📸</div><div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--black);font-style:italic;">Portraits</div><div style="font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);">Coming Soon</div></a>
     <a href="animals.html" style="aspect-ratio:3/2;border-radius:2px;position:relative;overflow:hidden;text-decoration:none;display:block;">
-      <img src="My kitties-5.JPG" alt="Animal Session" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+      <img loading="lazy" decoding="async" src="My kitties-5.JPG" alt="Animal Session" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
       <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.15) 55%,transparent 100%);display:flex;align-items:flex-end;padding:18px;">
         <div>
           <div style="font-family:'DM Serif Display',serif;font-size:18px;color:#fff;font-style:italic;">Animals</div>
@@ -225,31 +227,31 @@
     <a href="contact.html" class="session-type">& More</a>
   </div>
   <a href="headshots.html" style="display:block;text-decoration:none;margin-bottom:12px;position:relative;overflow:hidden;border-radius:2px;height:500px;">
-    <img src="Stephanie Kirchoff - HR.jpg" alt="Headshots" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .5s;">
+    <img loading="lazy" decoding="async" src="Stephanie Kirchoff - HR.jpg" alt="Headshots" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .5s;">
     <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.7) 0%,rgba(0,0,0,.2) 60%,transparent 100%);display:flex;align-items:center;padding:0 64px;">
       <div><div style="font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#FFCbec;margin-bottom:12px;">Business Photography</div><div style="font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,52px);color:#fff;line-height:1.1;margin-bottom:16px;">Headshots</div><p style="font-size:15px;font-weight:300;color:rgba(255,255,255,.85);line-height:1.7;max-width:420px;margin-bottom:24px;">Professional headshots that make your team look confident, polished, and on-brand. Shot on location or in studio.</p><div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E1A02B;">View Gallery →</div></div>
     </div>
   </a>
   <a href="branded-content.html" style="display:block;text-decoration:none;margin-bottom:12px;position:relative;overflow:hidden;border-radius:2px;height:500px;">
-    <img src="BPI Semi & Tanks Photo 1.JPG" alt="Branded Content" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .5s;">
+    <img loading="lazy" decoding="async" src="BPI Semi & Tanks Photo 1.JPG" alt="Branded Content" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .5s;">
     <div style="position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.7) 0%,rgba(0,0,0,.2) 60%,transparent 100%);display:flex;align-items:center;justify-content:flex-end;padding:0 64px;">
       <div style="text-align:right;"><div style="font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#FFCbec;margin-bottom:12px;">Business Photography</div><div style="font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,52px);color:#fff;line-height:1.1;margin-bottom:16px;">Branded Content</div><p style="font-size:15px;font-weight:300;color:rgba(255,255,255,.85);line-height:1.7;max-width:420px;margin-bottom:24px;">Fleet photography, facility shots, full branded content days. We make your business look as good as it is.</p><div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E1A02B;">View Gallery →</div></div>
     </div>
   </a>
   <a href="on-the-job.html" style="display:block;text-decoration:none;margin-bottom:12px;position:relative;overflow:hidden;border-radius:2px;height:500px;">
-    <img src="BPI Photo 1.jpg" alt="On The Job" style="width:100%;height:100%;object-fit:cover;object-position:30% 25%;display:block;transition:transform .5s;">
+    <img loading="lazy" decoding="async" src="BPI Photo 1.jpg" alt="On The Job" style="width:100%;height:100%;object-fit:cover;object-position:30% 25%;display:block;transition:transform .5s;">
     <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.7) 0%,rgba(0,0,0,.2) 60%,transparent 100%);display:flex;align-items:center;padding:0 64px;">
       <div><div style="font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#FFCbec;margin-bottom:12px;">Business Photography</div><div style="font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,52px);color:#fff;line-height:1.1;margin-bottom:16px;">On The Job</div><p style="font-size:15px;font-weight:300;color:rgba(255,255,255,.85);line-height:1.7;max-width:420px;margin-bottom:24px;">Candid, authentic photos of your team doing what they do best. Real work, real people — the kind of content that builds trust.</p><div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E1A02B;">View Gallery →</div></div>
     </div>
   </a>
   <a href="product-photography.html" style="display:block;text-decoration:none;margin-bottom:12px;position:relative;overflow:hidden;border-radius:2px;height:500px;">
-    <img src="Cropped ICC Teal Ice Cream.jpg" alt="Product Photography" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .5s;">
+    <img loading="lazy" decoding="async" src="Cropped ICC Teal Ice Cream.jpg" alt="Product Photography" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .5s;">
     <div style="position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.7) 0%,rgba(0,0,0,.2) 60%,transparent 100%);display:flex;align-items:center;justify-content:flex-end;padding:0 64px;">
       <div style="text-align:right;"><div style="font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#FFCbec;margin-bottom:12px;">Business Photography</div><div style="font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,52px);color:#fff;line-height:1.1;margin-bottom:16px;">Product Photography</div><p style="font-size:15px;font-weight:300;color:rgba(255,255,255,.85);line-height:1.7;max-width:420px;margin-bottom:24px;">Scroll-stopping product shots that make people stop and buy. From retail to merch to lifestyle photography.</p><div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E1A02B;">View Gallery →</div></div>
     </div>
   </a>
   <a href="events.html" style="display:block;text-decoration:none;margin-bottom:0;position:relative;overflow:hidden;border-radius:2px;height:500px;">
-    <img src="Christmas BPI 4 Event.PNG" alt="Events" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .5s;">
+    <img loading="lazy" decoding="async" src="Christmas BPI 4 Event.PNG" alt="Events" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .5s;">
     <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.7) 0%,rgba(0,0,0,.2) 60%,transparent 100%);display:flex;align-items:center;padding:0 64px;">
       <div><div style="font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#FFCbec;margin-bottom:12px;">Business Photography</div><div style="font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,52px);color:#fff;line-height:1.1;margin-bottom:16px;">Events</div><p style="font-size:15px;font-weight:300;color:rgba(255,255,255,.85);line-height:1.7;max-width:420px;margin-bottom:24px;">Parades, sponsorships, grand openings, company events. We capture your brand showing up for the community.</p><div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E1A02B;">View Gallery →</div></div>
     </div>
@@ -317,16 +319,18 @@
       <div class="footer-list">
         <a href="https://www.instagram.com/gsmediaempirellc?igsh=MXJ0bzljYjRpOWJjaA==" target="_blank" class="footer-link"><img src="INSTA LOGO.jpeg" style="width:18px;height:18px;border-radius:4px;"> @gsmediaempirellc</a>
         <a href="https://www.facebook.com/profile.php?id=61584386363200" target="_blank" class="footer-link"><img src="FB LOGO.png" style="width:18px;height:18px;border-radius:50%;"> GS Media Empire LLC</a>
+        <a href="https://www.tiktok.com/@gsmediaempirellc?_r=1&_t=ZT-98MsESz2zks" target="_blank" class="footer-link"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;overflow:hidden;flex-shrink:0;"><img loading="lazy" decoding="async" src="Tik%20Tok%20.PNG" style="width:100%;height:100%;object-fit:cover;transform:scale(1.18);display:block;"></span> @gsmediaempirellc</a>
       </div>
-      <a href="#subscribe-form" style="font-family:'Playfair Display',serif;font-size:16px;color:var(--white);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:20px;display:block;text-decoration:none;transition:color .25s;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--white)'">Stay Connected & Never Miss an Update</a>
     </div>
-    <div class="footer-col-c footer-logo-wrap" style="align-self:start;">
-      <a href="index.html">
-        <img src="LARGE GS MEDIA EMPIRE LLC LOGO.PNG" alt="GS Media Empire LLC" class="footer-logo-img">
-      </a>
-      <div class="footer-tagline">We turn clicks into loyal customers.<br>Wyoming-based, serving businesses everywhere.</div>
+    <div class="footer-col-c" style="align-self:start;display:flex;flex-direction:column;">
+      <div class="footer-col-title">Photography Socials</div>
+      <div class="footer-list">
+        <a href="https://www.instagram.com/gsmediaempirellc.photography?igsh=NWw3NzRlNW5hM2F4&utm_source=qr" target="_blank" class="footer-link"><img src="INSTA LOGO.jpeg" style="width:18px;height:18px;border-radius:4px;"> @gsmediaempirellc.photography</a>
+        <a href="https://www.facebook.com/profile.php?id=61592109577116" target="_blank" class="footer-link"><img src="FB LOGO.png" style="width:18px;height:18px;border-radius:50%;"> GS Media Empire LLC Photography</a>
+      </div>
     </div>
     <div class="footer-col-d" style="align-self:end;padding-top:16px;">
+      <a href="#subscribe-form" onclick="highlightSubscribe(); return false;" style="font-family:'Playfair Display',serif;font-size:24px;color:var(--white);font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:18px;display:block;text-decoration:none;white-space:nowrap;transition:color .25s;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--white)'">Stay Connected & Never Miss an Update</a>
       <form id="subscribe-form" action="https://gsmediaempirellc.us11.list-manage.com/subscribe/post?u=0f4767a2ba41844ead65eb0ab&id=4c972c1f1d&f_id=00b3d5e3f0" method="post" target="_blank" style="display:flex;width:100%;flex-wrap:wrap;gap:0;">
         <input type="email" name="EMAIL" required placeholder="Your email address" style="flex:1;min-width:200px;padding:18px;border:none;border-radius:2px 0 0 2px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;">
         <div aria-hidden="true" style="position:absolute;left:-5000px;">
@@ -335,7 +339,7 @@
         <button type="submit" style="background:var(--pink);color:var(--black);padding:18px 32px;border:none;border-radius:0 2px 2px 0;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .25s;white-space:nowrap;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--white)'" onmouseout="this.style.background='var(--pink)';this.style.color='var(--black)'">Subscribe</button>
       </form>
     </div>
-    <div class="footer-col-e" style="align-self:start;">
+    <div class="footer-col-e" style="align-self:stretch;display:flex;flex-direction:column;">
       <div class="footer-col-title">Services</div>
       <div class="footer-service-btns">
         <a href="photography.html" class="footer-service-btn">Photography</a>
@@ -344,6 +348,7 @@
         <a href="branding.html" class="footer-service-btn">Branding</a>
         <a href="google-setup.html" class="footer-service-btn">Google & SEO Setup</a>
       </div>
+      <a href="index.html" style="font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-lt);text-decoration:none;margin-top:auto;padding-top:16px;display:inline-flex;align-items:center;gap:8px;transition:color .2s;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--gold-lt)'">← Back to Home</a>
     </div>
   </div>
   <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:20px;">
@@ -357,6 +362,21 @@
 <script>
   function toggleMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function highlightSubscribe() {
+    var input = document.querySelector('#subscribe-form input[name=EMAIL]');
+    if (!input) return;
+    input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    input.style.transition = 'box-shadow .3s, border-color .3s';
+    input.style.boxShadow = '0 0 0 3px var(--pink)';
+    input.style.borderColor = 'var(--pink)';
+    setTimeout(function() {
+      input.focus();
+    }, 350);
+    setTimeout(function() {
+      input.style.boxShadow = '';
+      input.style.borderColor = '';
+    }, 1800);
   }
 </script>
 </body>
