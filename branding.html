@@ -87,7 +87,7 @@
   .footer-logo-wrap { display: flex; flex-direction: column; align-items: flex-start; }
   .footer-logo-img { height: 80px; width: auto; margin-bottom: 12px; display: block; }
   .footer-tagline { font-size: 15px; color: var(--white); font-weight: 300; line-height: 1.7; }
-  .footer-col-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; height: 56px; display: flex; align-items: flex-start; }
+  .footer-col-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; height: 64px; display: flex; align-items: flex-start; }
   .footer-list { display: flex; flex-direction: column; gap: 14px; }
   .footer-link { font-size: 16px; color: var(--white); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color .2s; }
   .footer-link:hover { color: var(--pink); }
@@ -343,7 +343,7 @@
       </div>
     </div>
     <div class="footer-col-d" style="align-self:end;padding-top:16px;">
-      <a href="#subscribe-form" style="font-family:'Playfair Display',serif;font-size:24px;color:var(--white);font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:18px;display:block;text-decoration:none;white-space:nowrap;transition:color .25s;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--white)'">Stay Connected & Never Miss an Update</a>
+      <a href="#subscribe-form" onclick="highlightSubscribe(); return false;" style="font-family:'Playfair Display',serif;font-size:24px;color:var(--white);font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:18px;display:block;text-decoration:none;white-space:nowrap;transition:color .25s;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--white)'">Stay Connected & Never Miss an Update</a>
       <form id="subscribe-form" action="https://gsmediaempirellc.us11.list-manage.com/subscribe/post?u=0f4767a2ba41844ead65eb0ab&id=4c972c1f1d&f_id=00b3d5e3f0" method="post" target="_blank" style="display:flex;width:100%;flex-wrap:wrap;gap:0;">
         <input type="email" name="EMAIL" required placeholder="Your email address" style="flex:1;min-width:200px;padding:18px;border:none;border-radius:2px 0 0 2px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;">
         <div aria-hidden="true" style="position:absolute;left:-5000px;">
@@ -376,10 +376,24 @@
   function toggleMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
   }
+  function highlightSubscribe() {
+    var input = document.querySelector('#subscribe-form input[name=EMAIL]');
+    if (!input) return;
+    input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    input.style.transition = 'box-shadow .3s, border-color .3s';
+    input.style.boxShadow = '0 0 0 3px var(--pink)';
+    input.style.borderColor = 'var(--pink)';
+    setTimeout(function() {
+      input.focus();
+    }, 350);
+    setTimeout(function() {
+      input.style.boxShadow = '';
+      input.style.borderColor = '';
+    }, 1800);
+  }
   function selectBrandNeed(value) {
     document.getElementById('brandNeed').value = value;
   }
 </script>
 </body>
 </html>
-
