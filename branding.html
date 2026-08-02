@@ -87,7 +87,7 @@
   .footer-logo-wrap { display: flex; flex-direction: column; align-items: flex-start; }
   .footer-logo-img { height: 80px; width: auto; margin-bottom: 12px; display: block; }
   .footer-tagline { font-size: 15px; color: var(--white); font-weight: 300; line-height: 1.7; }
-  .footer-col-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; }
+  .footer-col-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; height: 56px; display: flex; align-items: flex-start; }
   .footer-list { display: flex; flex-direction: column; gap: 14px; }
   .footer-link { font-size: 16px; color: var(--white); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color .2s; }
   .footer-link:hover { color: var(--pink); }
@@ -131,6 +131,8 @@
     footer { padding: 40px 16px 28px; }
     .footer-grid-main { grid-template-columns: 1fr !important; gap: 32px !important; }
     .footer-col-a, .footer-col-b, .footer-col-c, .footer-col-d, .footer-col-e { grid-column: 1 !important; grid-row: auto !important; }
+    .footer-col-title { min-height: 0 !important; height: auto !important; }
+    .footer-col-d a[href="#subscribe-form"] { white-space: normal !important; }
   }
 </style>
 </head>
@@ -181,9 +183,9 @@
       <a href="index.html" class="back-link">← Back to Home</a>
     </div>
   </div>
-  <div class="hero-img" style="border-radius:2px;height:560px;">
+  <a href="#contact" class="hero-img" style="border-radius:2px;height:560px;display:block;">
     <img src="Branding hero .JPG" alt="Branding & Identity">
-  </div>
+  </a>
 </section>
 
 <section class="services">
@@ -259,23 +261,23 @@
   <h2 class="section-heading">Branding We're <em>Proud Of.</em></h2>
   <p style="font-size:16px;font-weight:300;line-height:1.8;max-width:600px;margin-top:8px;">Portfolio coming soon. Reach out to see examples of our branding work and discuss what we can create for your business.</p>
   <div class="portfolio-grid">
-    <div style="aspect-ratio:1;border-radius:2px;overflow:hidden;background:var(--white);">
+    <a href="#contact" style="aspect-ratio:1;border-radius:2px;overflow:hidden;background:var(--white);display:block;">
       <img src="Cropped Blakeman Propane FB Cover.jpg" alt="Blakeman Propane Branding" style="width:100%;height:100%;object-fit:contain;display:block;">
-    </div>
-    <div style="aspect-ratio:1;border-radius:2px;overflow:hidden;background:var(--white);">
+    </a>
+    <a href="#contact" style="aspect-ratio:1;border-radius:2px;overflow:hidden;background:var(--white);display:block;">
       <img src="Business card - 2 Front.PNG" alt="Business Card Front" style="width:100%;height:100%;object-fit:contain;display:block;">
-    </div>
-    <div style="aspect-ratio:1;border-radius:2px;overflow:hidden;background:var(--white);">
+    </a>
+    <a href="#contact" style="aspect-ratio:1;border-radius:2px;overflow:hidden;background:var(--white);display:block;">
       <img src="Business card - 1 Back.PNG" alt="Business Card Back" style="width:100%;height:100%;object-fit:contain;display:block;">
-    </div>
-    <div style="aspect-ratio:1;border-radius:2px;overflow:hidden;background:var(--white);">
+    </a>
+    <a href="#contact" style="aspect-ratio:1;border-radius:2px;overflow:hidden;background:var(--white);display:block;">
       <img src="Logo with number.PNG" alt="Logo Design" style="width:100%;height:100%;object-fit:contain;display:block;">
-    </div>
-    <div style="aspect-ratio:1;background:var(--pink);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;text-align:center;">
+    </a>
+    <a href="#contact" style="aspect-ratio:1;background:var(--pink);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;text-align:center;text-decoration:none;">
       <div style="font-size:28px;">✨</div>
       <div style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--black);font-style:italic;">More Coming Soon</div>
       <div style="font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);">Stay Tuned</div>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -330,16 +332,18 @@
       <div class="footer-list">
         <a href="https://www.instagram.com/gsmediaempirellc?igsh=MXJ0bzljYjRpOWJjaA==" target="_blank" class="footer-link"><img src="INSTA LOGO.jpeg" style="width:18px;height:18px;border-radius:4px;"> @gsmediaempirellc</a>
         <a href="https://www.facebook.com/profile.php?id=61584386363200" target="_blank" class="footer-link"><img src="FB LOGO.png" style="width:18px;height:18px;border-radius:50%;"> GS Media Empire LLC</a>
+        <a href="https://www.tiktok.com/@gsmediaempirellc?_r=1&_t=ZT-98MsESz2zks" target="_blank" class="footer-link"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;overflow:hidden;flex-shrink:0;"><img loading="lazy" decoding="async" src="Tik%20Tok%20.PNG" style="width:100%;height:100%;object-fit:cover;transform:scale(1.18);display:block;"></span> @gsmediaempirellc</a>
       </div>
-      <a href="#subscribe-form" style="font-family:'Playfair Display',serif;font-size:16px;color:var(--white);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:20px;display:block;text-decoration:none;transition:color .25s;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--white)'">Stay Connected & Never Miss an Update</a>
     </div>
-    <div class="footer-col-c footer-logo-wrap" style="align-self:start;">
-      <a href="index.html">
-        <img src="LARGE GS MEDIA EMPIRE LLC LOGO.PNG" alt="GS Media Empire LLC" class="footer-logo-img">
-      </a>
-      <div class="footer-tagline">We turn clicks into loyal customers.<br>Wyoming-based, serving businesses everywhere.</div>
+    <div class="footer-col-c" style="align-self:start;display:flex;flex-direction:column;">
+      <div class="footer-col-title">Photography Socials</div>
+      <div class="footer-list">
+        <a href="https://www.instagram.com/gsmediaempirellc.photography?igsh=NWw3NzRlNW5hM2F4&utm_source=qr" target="_blank" class="footer-link"><img src="INSTA LOGO.jpeg" style="width:18px;height:18px;border-radius:4px;"> @gsmediaempirellc.photography</a>
+        <a href="https://www.facebook.com/profile.php?id=61592109577116" target="_blank" class="footer-link"><img src="FB LOGO.png" style="width:18px;height:18px;border-radius:50%;"> GS Media Empire LLC Photography</a>
+      </div>
     </div>
     <div class="footer-col-d" style="align-self:end;padding-top:16px;">
+      <a href="#subscribe-form" style="font-family:'Playfair Display',serif;font-size:24px;color:var(--white);font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:18px;display:block;text-decoration:none;white-space:nowrap;transition:color .25s;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--white)'">Stay Connected & Never Miss an Update</a>
       <form id="subscribe-form" action="https://gsmediaempirellc.us11.list-manage.com/subscribe/post?u=0f4767a2ba41844ead65eb0ab&id=4c972c1f1d&f_id=00b3d5e3f0" method="post" target="_blank" style="display:flex;width:100%;flex-wrap:wrap;gap:0;">
         <input type="email" name="EMAIL" required placeholder="Your email address" style="flex:1;min-width:200px;padding:18px;border:none;border-radius:2px 0 0 2px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;">
         <div aria-hidden="true" style="position:absolute;left:-5000px;">
@@ -348,7 +352,7 @@
         <button type="submit" style="background:var(--pink);color:var(--black);padding:18px 32px;border:none;border-radius:0 2px 2px 0;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .25s;white-space:nowrap;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--white)'" onmouseout="this.style.background='var(--pink)';this.style.color='var(--black)'">Subscribe</button>
       </form>
     </div>
-    <div class="footer-col-e" style="align-self:start;">
+    <div class="footer-col-e" style="align-self:stretch;display:flex;flex-direction:column;">
       <div class="footer-col-title">Services</div>
       <div class="footer-service-btns">
         <a href="photography.html" class="footer-service-btn">Photography</a>
@@ -357,6 +361,7 @@
         <a href="branding.html" class="footer-service-btn">Branding</a>
         <a href="google-setup.html" class="footer-service-btn">Google & SEO Setup</a>
       </div>
+      <a href="index.html" style="font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-lt);text-decoration:none;margin-top:auto;padding-top:16px;display:inline-flex;align-items:center;gap:8px;transition:color .2s;" onmouseover="this.style.color='var(--pink)'" onmouseout="this.style.color='var(--gold-lt)'">← Back to Home</a>
     </div>
   </div>
   <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:20px;">
@@ -377,3 +382,4 @@
 </script>
 </body>
 </html>
+
