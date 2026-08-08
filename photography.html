@@ -66,6 +66,7 @@
   .session-type { font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--black); border: 1px solid rgba(201,138,26,.3); padding: 8px 18px; border-radius: 2px; transition: all .2s; cursor: pointer; text-decoration: none; display: inline-block; }
   .session-type:hover { background: var(--pink); border-color: var(--pink); }
   .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .photo-grid > a { min-width: 0; }
 
   .business { padding: 100px 72px; background: #f9f9f9; }
 
@@ -137,6 +138,8 @@
     .pricing { padding: 64px 16px; }
     .contact { grid-template-columns: 1fr; padding: 56px 16px; gap: 40px; }
     .form-row { grid-template-columns: 1fr; }
+    .business a { height: 420px !important; }
+    .business a > div { padding: 0 24px !important; }
     footer { padding: 40px 16px 28px; }
     .footer-grid-main { grid-template-columns: 1fr !important; gap: 32px !important; }
     .footer-col-a, .footer-col-b, .footer-col-c, .footer-col-d, .footer-col-e { grid-column: 1 !important; grid-row: auto !important; }
@@ -401,3 +404,4 @@
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
+
