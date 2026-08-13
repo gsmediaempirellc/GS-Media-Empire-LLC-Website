@@ -91,6 +91,20 @@
   .btn-pink { background: var(--pink); color: var(--black); padding: 16px 44px; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: all .25s; }
   .btn-pink:hover { background: var(--gold-lt); color: var(--white); transform: translateY(-2px); }
 
+  .book-section { padding: 100px 72px; background: var(--white); }
+  .book-section h2 { font-family: 'DM Serif Display', serif; font-size: clamp(32px,3.5vw,48px); font-weight: 400; color: var(--black); margin-bottom: 16px; line-height: 1.1; }
+  .book-section h2 em { font-style: italic; color: var(--gold); }
+  .book-section > p { font-size: 15px; color: var(--black); font-weight: 300; line-height: 1.8; margin-bottom: 32px; max-width: 560px; }
+  .contact-form { display: flex; flex-direction: column; gap: 18px; max-width: 640px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-group label { font-family: 'Playfair Display', serif; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--black); }
+  .form-group input, .form-group select, .form-group textarea { background: #f9f9f9; border: 1px solid rgba(201,138,26,.25); border-radius: 2px; padding: 14px 18px; font-size: 14px; font-family: 'DM Sans', sans-serif; color: var(--black); outline: none; transition: border-color .2s; width: 100%; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold-lt); }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .form-submit { background: var(--gold-lt); color: var(--black); padding: 16px 40px; border-radius: 2px; font-family: 'Playfair Display', serif; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; border: none; cursor: pointer; align-self: flex-start; transition: all .25s; }
+  .form-submit:hover { background: var(--pink); transform: translateY(-2px); }
+
   footer { background: var(--black); border-top: 1px solid rgba(255,255,255,.07); padding: 60px 72px 36px; display: flex; flex-direction: column; gap: 40px; }
   .footer-logo-wrap { display: flex; flex-direction: column; align-items: flex-start; }
   .footer-col-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; height: 64px; display: flex; align-items: flex-start; }
@@ -119,6 +133,8 @@
     .page-hero, .quick-nav, .pricing-section, .all-sessions { padding-left: 16px; padding-right: 16px; }
     .promo-banner { margin-left: 16px; margin-right: 16px; }
     .price-boxes { grid-template-columns: 1fr; }
+    .book-section { padding: 56px 16px; }
+    .form-row { grid-template-columns: 1fr; }
     footer { padding: 40px 16px 28px; }
     .footer-grid-main { grid-template-columns: 1fr !important; gap: 32px !important; }
     .footer-col-a, .footer-col-b, .footer-col-c, .footer-col-e { grid-column: 1 !important; grid-row: auto !important; }
@@ -172,7 +188,7 @@
 <div class="promo-banner">
   <span class="promo-headline">Limited Time —</span>
   <span class="promo-main">20% Off All Personal Sessions</span>
-  <span class="promo-sub">(Content & Business sessions not included)</span>
+  <span class="promo-sub">(Content & Business sessions not included. Terms apply.)</span>
 </div>
 
 <div class="quick-nav">
@@ -182,8 +198,19 @@
   <a href="#friends">Friends</a>
   <a href="#portraits">Portraits</a>
   <a href="#maternity">Maternity</a>
-  <a href="#pets">Pets</a>
+  <a href="#pets">Animals/Pets</a>
 </div>
+
+<section class="all-sessions">
+  <h2>Included With <em>Every Session</em></h2>
+  <ul>
+    <li>Every session includes an edited digital gallery</li>
+    <li>Local travel included, additional fees may apply</li>
+    <li>Additional location: $25 + applicable travel fees</li>
+    <li>Additional time: 30 minutes – $50, 1 hour – $100</li>
+    <li>Admission and permit fees are the client's responsibility, when applicable</li>
+  </ul>
+</section>
 
 <section class="pricing-section" id="seniors">
   <h2 class="session-pricing-title">Senior Sessions</h2>
@@ -350,7 +377,7 @@
 </section>
 
 <section class="pricing-section" id="pets">
-  <h2 class="session-pricing-title">Pet Sessions</h2>
+  <h2 class="session-pricing-title">Animal/Pet Sessions</h2>
   <div class="price-boxes">
     <div class="price-box">
       <div class="tier">Mini</div>
@@ -378,16 +405,35 @@
   <p class="session-extra-note">Additional pet: $25.</p>
 </section>
 
-<section class="all-sessions">
-  <h2>Included With <em>Every Session</em></h2>
-  <ul>
-    <li>Every session includes an edited digital gallery</li>
-    <li>Local travel included, additional fees may apply</li>
-    <li>Additional location: $25 + applicable travel fees</li>
-    <li>Additional time: 30 minutes – $50, 1 hour – $100</li>
-    <li>Admission and permit fees are the client's responsibility, when applicable</li>
-  </ul>
-  <a href="contact.html" class="btn-pink">Book Your Session</a>
+<section class="book-section" id="booking">
+  <div class="section-label">Book a Session</div>
+  <h2>Ready to <em>Book?</em></h2>
+  <p>Fill out the form and I'll get back to you within 24 to 48 hours to chat about your session, location, and pricing.</p>
+  <div class="contact-form">
+    <div class="form-row">
+      <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane"></div>
+      <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+    </div>
+    <div class="form-group"><label>Email Address</label><input type="email" placeholder="jane@email.com"></div>
+    <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="307-000-0000"></div>
+    <div class="form-group">
+      <label>Type of Session</label>
+      <select>
+        <option value="">Select a session type...</option>
+        <option>Family Session</option>
+        <option>Couples Session</option>
+        <option>Senior Session</option>
+        <option>Friends Session</option>
+        <option>Portrait Session</option>
+        <option>Maternity Session</option>
+        <option>Animal/Pet Session</option>
+        <option>Mini Session</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-group"><label>Tell Me About Your Session</label><textarea placeholder="Tell me a little about what you're looking for, where you'd like to shoot, and any details that would help me prepare..."></textarea></div>
+    <button class="form-submit">Send Message</button>
+  </div>
 </section>
 
 <footer>
