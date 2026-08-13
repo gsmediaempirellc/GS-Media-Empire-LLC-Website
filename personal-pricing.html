@@ -124,6 +124,16 @@
   .footer-copy { font-size: 14px; color: var(--white); }
   .footer-made { font-size: 14px; color: var(--white); }
 
+  /* Keeps backgrounds full-bleed but centers content on wide screens like iPad landscape */
+  .page-hero, .quick-nav, .pricing-section, .all-sessions, .book-section {
+    padding-left: max(72px, calc(50% - 700px));
+    padding-right: max(72px, calc(50% - 700px));
+  }
+  .promo-banner {
+    margin-left: max(72px, calc(50% - 700px));
+    margin-right: max(72px, calc(50% - 700px));
+  }
+
   @media (max-width: 768px) {
     .topbar { padding: 10px 16px; flex-direction: column; justify-content: center; align-items: center; }
     .topbar-item { display: none; }
