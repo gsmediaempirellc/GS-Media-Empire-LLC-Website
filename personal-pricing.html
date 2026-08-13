@@ -65,38 +65,42 @@
   .promo-banner .promo-main { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
   .promo-banner .promo-sub { font-size: 12px; font-weight: 300; color: rgba(255,255,255,.75); }
 
-  .quick-nav { padding: 0 72px 56px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .quick-nav { padding: 0 72px 56px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
   .quick-nav a { font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--black); border: 1px solid rgba(201,138,26,.3); padding: 8px 18px; border-radius: 2px; transition: all .2s; text-decoration: none; }
   .quick-nav a:hover { background: var(--pink); border-color: var(--pink); }
 
   .pricing-section { padding: 64px 72px; }
   .pricing-section:nth-of-type(even) { background: #f9f9f9; }
-  .session-pricing-title { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 34px; color: var(--black); margin-bottom: 28px; scroll-margin-top: 100px; }
-  .price-boxes { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 640px; margin-bottom: 20px; }
-  .price-box { background: var(--white); border: 1px solid rgba(201,138,26,.25); border-radius: 2px; padding: 32px 28px; }
+  .session-pricing-title { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 34px; color: var(--black); margin-bottom: 28px; scroll-margin-top: 100px; text-align: center; }
+  .price-boxes { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 640px; margin: 0 auto 20px; }
+  .price-box { background: var(--white); border: 1px solid rgba(201,138,26,.25); border-radius: 2px; padding: 32px 28px; display: block; text-decoration: none; cursor: pointer; transition: all .25s; }
+  .price-box:hover { background: var(--pink); border-color: var(--pink); transform: translateY(-2px); }
   .pricing-section:nth-of-type(even) .price-box { background: var(--white); }
+  .pricing-section:nth-of-type(even) .price-box:hover { background: var(--pink); }
   .price-box .tier { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 22px; margin-bottom: 16px; color: var(--black); }
   .price-box ul { list-style: none; margin-bottom: 20px; }
   .price-box li { font-size: 14px; font-weight: 300; margin-bottom: 10px; padding-left: 16px; position: relative; line-height: 1.5; }
   .price-box li::before { content: '•'; color: var(--gold); position: absolute; left: 0; }
   .price-box .price { font-family: 'DM Serif Display', serif; font-size: 30px; color: var(--gold); }
-  .session-extra-note { font-size: 13px; color: rgba(0,0,0,.65); font-weight: 400; max-width: 640px; }
+  .session-extra-note { font-size: 13px; color: rgba(0,0,0,.65); font-weight: 400; max-width: 640px; margin: 0 auto; text-align: center; }
 
-  .all-sessions { padding: 72px; background: var(--black); color: #fff; }
-  .all-sessions h2 { font-family: 'DM Serif Display', serif; font-size: clamp(30px,3.5vw,44px); margin-bottom: 24px; }
+  .all-sessions { padding: 72px; background: var(--black); color: #fff; text-align: center; }
+  .all-sessions h2 { font-family: 'DM Serif Display', serif; font-size: clamp(30px,3.5vw,44px); margin-bottom: 24px; text-align: center; }
   .all-sessions h2 em { font-style: italic; color: var(--pink); }
-  .all-sessions ul { list-style: none; max-width: 640px; margin-bottom: 32px; }
+  .all-sessions ul { list-style: none; max-width: 640px; margin: 0 auto 32px; text-align: left; }
   .all-sessions li { font-size: 15px; font-weight: 300; margin-bottom: 12px; padding-left: 18px; position: relative; line-height: 1.6; }
   .all-sessions li::before { content: '•'; color: var(--gold-lt); position: absolute; left: 0; }
   .btn-pink { background: var(--pink); color: var(--black); padding: 16px 44px; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: all .25s; }
   .btn-pink:hover { background: var(--gold-lt); color: var(--white); transform: translateY(-2px); }
 
-  .book-section { padding: 100px 72px; background: var(--pink); }
+  .book-section { padding: 100px 72px; background: var(--pink); text-align: center; }
   .book-section h2 { font-family: 'DM Serif Display', serif; font-size: clamp(32px,3.5vw,48px); font-weight: 400; color: var(--black); margin-bottom: 16px; line-height: 1.1; }
   .book-section h2 em { font-style: italic; color: var(--gold); }
-  .book-section > p { font-size: 15px; color: var(--black); font-weight: 300; line-height: 1.8; margin-bottom: 32px; max-width: 560px; }
+  .book-section > p { font-size: 15px; color: var(--black); font-weight: 300; line-height: 1.8; margin: 0 auto 32px; max-width: 560px; }
+  .book-section .section-label { text-align: center; }
+  .book-section .form-group { text-align: left; }
   .book-section .form-group input, .book-section .form-group select, .book-section .form-group textarea { background: var(--white); }
-  .contact-form { display: flex; flex-direction: column; gap: 18px; max-width: 640px; }
+  .contact-form { display: flex; flex-direction: column; gap: 18px; max-width: 640px; margin: 0 auto; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .form-group { display: flex; flex-direction: column; gap: 8px; }
   .form-group label { font-family: 'Playfair Display', serif; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--black); }
@@ -229,7 +233,7 @@
 <section class="pricing-section" id="seniors">
   <h2 class="session-pricing-title">Senior Sessions</h2>
   <div class="price-boxes">
-    <div class="price-box">
+    <a href="#booking" class="price-box">
       <div class="tier">Mini</div>
       <ul>
         <li>30 minutes</li>
@@ -238,8 +242,8 @@
         <li>Edited gallery</li>
       </ul>
       <div class="price">$100</div>
-    </div>
-    <div class="price-box">
+    </a>
+    <a href="#booking" class="price-box">
       <div class="tier">Regular</div>
       <ul>
         <li>Up to 2 hours</li>
@@ -248,14 +252,14 @@
         <li>Edited gallery</li>
       </ul>
       <div class="price">$200</div>
-    </div>
+    </a>
   </div>
 </section>
 
 <section class="pricing-section" id="couples">
   <h2 class="session-pricing-title">Couples Sessions</h2>
   <div class="price-boxes">
-    <div class="price-box">
+    <a href="#booking" class="price-box">
       <div class="tier">Mini</div>
       <ul>
         <li>30 minutes</li>
@@ -264,8 +268,8 @@
         <li>Edited gallery</li>
       </ul>
       <div class="price">$100</div>
-    </div>
-    <div class="price-box">
+    </a>
+    <a href="#booking" class="price-box">
       <div class="tier">Regular</div>
       <ul>
         <li>Up to 1.5 hours</li>
@@ -274,14 +278,14 @@
         <li>Edited gallery</li>
       </ul>
       <div class="price">$175</div>
-    </div>
+    </a>
   </div>
 </section>
 
 <section class="pricing-section" id="family">
   <h2 class="session-pricing-title">Family Sessions</h2>
   <div class="price-boxes">
-    <div class="price-box">
+    <a href="#booking" class="price-box">
       <div class="tier">Mini</div>
       <ul>
         <li>30 minutes</li>
@@ -290,8 +294,8 @@
         <li>Edited gallery</li>
       </ul>
       <div class="price">$125</div>
-    </div>
-    <div class="price-box">
+    </a>
+    <a href="#booking" class="price-box">
       <div class="tier">Regular</div>
       <ul>
         <li>Up to 1.5 hours</li>
@@ -300,7 +304,7 @@
         <li>Edited gallery</li>
       </ul>
       <div class="price">$225</div>
-    </div>
+    </a>
   </div>
   <p class="session-extra-note">Extended family & reunions starting at $250.</p>
 </section>
@@ -308,7 +312,7 @@
 <section class="pricing-section" id="friends">
   <h2 class="session-pricing-title">Friends Sessions</h2>
   <div class="price-boxes">
-    <div class="price-box">
+    <a href="#booking" class="price-box">
       <div class="tier">Mini</div>
       <ul>
         <li>30 minutes</li>
@@ -319,8 +323,8 @@
         <li>Edited gallery</li>
       </ul>
       <div class="price">$115</div>
-    </div>
-    <div class="price-box">
+    </a>
+    <a href="#booking" class="price-box">
       <div class="tier">Regular</div>
       <ul>
         <li>Up to 1.5 hours</li>
@@ -331,7 +335,7 @@
         <li>Edited gallery</li>
       </ul>
       <div class="price">$200</div>
-    </div>
+    </a>
   </div>
   <p class="session-extra-note">Additional person: $25.</p>
 </section>
@@ -339,7 +343,7 @@
 <section class="pricing-section" id="portraits">
   <h2 class="session-pricing-title">Portrait Sessions</h2>
   <div class="price-boxes">
-    <div class="price-box">
+    <a href="#booking" class="price-box">
       <div class="tier">Mini</div>
       <ul>
         <li>30 minutes</li>
@@ -348,8 +352,8 @@
         <li>Edited gallery</li>
       </ul>
       <div class="price">$100</div>
-    </div>
-    <div class="price-box">
+    </a>
+    <a href="#booking" class="price-box">
       <div class="tier">Regular</div>
       <ul>
         <li>Up to 1 hour</li>
@@ -358,14 +362,14 @@
         <li>Edited gallery</li>
       </ul>
       <div class="price">$150</div>
-    </div>
+    </a>
   </div>
 </section>
 
 <section class="pricing-section" id="maternity">
   <h2 class="session-pricing-title">Maternity Sessions</h2>
   <div class="price-boxes">
-    <div class="price-box">
+    <a href="#booking" class="price-box">
       <div class="tier">Mini</div>
       <ul>
         <li>30 minutes</li>
@@ -375,8 +379,8 @@
         <li>Edited gallery</li>
       </ul>
       <div class="price">$100</div>
-    </div>
-    <div class="price-box">
+    </a>
+    <a href="#booking" class="price-box">
       <div class="tier">Regular</div>
       <ul>
         <li>Up to 1.5 hours</li>
@@ -386,14 +390,14 @@
         <li>Edited gallery</li>
       </ul>
       <div class="price">$175</div>
-    </div>
+    </a>
   </div>
 </section>
 
 <section class="pricing-section" id="pets">
   <h2 class="session-pricing-title">Animal/Pet Sessions</h2>
   <div class="price-boxes">
-    <div class="price-box">
+    <a href="#booking" class="price-box">
       <div class="tier">Mini</div>
       <ul>
         <li>30 minutes</li>
@@ -403,8 +407,8 @@
         <li>Edited gallery</li>
       </ul>
       <div class="price">$100</div>
-    </div>
-    <div class="price-box">
+    </a>
+    <a href="#booking" class="price-box">
       <div class="tier">Regular</div>
       <ul>
         <li>Up to 1 hour</li>
@@ -414,7 +418,7 @@
         <li>Edited gallery</li>
       </ul>
       <div class="price">$150</div>
-    </div>
+    </a>
   </div>
   <p class="session-extra-note">Additional pet: $25.</p>
 </section>
