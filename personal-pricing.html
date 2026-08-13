@@ -91,10 +91,11 @@
   .btn-pink { background: var(--pink); color: var(--black); padding: 16px 44px; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: all .25s; }
   .btn-pink:hover { background: var(--gold-lt); color: var(--white); transform: translateY(-2px); }
 
-  .book-section { padding: 100px 72px; background: var(--white); }
+  .book-section { padding: 100px 72px; background: var(--pink); }
   .book-section h2 { font-family: 'DM Serif Display', serif; font-size: clamp(32px,3.5vw,48px); font-weight: 400; color: var(--black); margin-bottom: 16px; line-height: 1.1; }
   .book-section h2 em { font-style: italic; color: var(--gold); }
   .book-section > p { font-size: 15px; color: var(--black); font-weight: 300; line-height: 1.8; margin-bottom: 32px; max-width: 560px; }
+  .book-section .form-group input, .book-section .form-group select, .book-section .form-group textarea { background: var(--white); }
   .contact-form { display: flex; flex-direction: column; gap: 18px; max-width: 640px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .form-group { display: flex; flex-direction: column; gap: 8px; }
@@ -132,6 +133,7 @@
     .hamburger { display: flex; }
     .page-hero, .quick-nav, .pricing-section, .all-sessions { padding-left: 16px; padding-right: 16px; }
     .promo-banner { margin-left: 16px; margin-right: 16px; }
+    .discount-note { margin-left: 16px !important; margin-right: 16px !important; }
     .price-boxes { grid-template-columns: 1fr; }
     .book-section { padding: 56px 16px; }
     .form-row { grid-template-columns: 1fr; }
@@ -190,6 +192,8 @@
   <span class="promo-main">20% Off All Personal Sessions</span>
   <span class="promo-sub">(Content & Business sessions not included. Terms apply.)</span>
 </div>
+
+<p class="discount-note" style="text-align:center;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin:0 72px 40px;">Prices listed below do not include the 20% discount — it will be applied at booking.</p>
 
 <div class="quick-nav">
   <a href="#seniors">Seniors</a>
