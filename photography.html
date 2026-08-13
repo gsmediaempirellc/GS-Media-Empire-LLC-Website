@@ -139,7 +139,7 @@
     .hero { grid-template-columns: 1fr; padding: 48px 16px 40px; gap: 40px; }
     .personal, .business { padding: 56px 16px; }
     .photo-grid { grid-template-columns: 1fr 1fr; }
-    .photo-grid > a { aspect-ratio: auto !important; height: 170px !important; overflow: hidden !important; }
+    .photo-grid > a, .photo-grid > div { aspect-ratio: auto !important; height: 170px !important; overflow: hidden !important; }
     .hero-img img { height: 420px !important; }
     .pricing { padding: 64px 16px; }
     .contact { grid-template-columns: 1fr; padding: 56px 16px; gap: 40px; }
@@ -208,11 +208,11 @@
   <h2 class="section-heading">Life's Biggest <em>Moments</em></h2>
   <p style="font-size:16px;font-weight:300;line-height:1.8;max-width:600px;margin-bottom:36px;">Every milestone deserves to be captured beautifully. Whether it's a family reunion, a senior portrait, or a maternity shoot we'll make sure you have images you'll treasure forever.</p>
 
-  <div class="promo-banner">
+  <a href="personal-pricing.html" class="promo-banner" style="text-decoration:none;cursor:pointer;">
     <span class="promo-headline">Limited Time —</span>
     <span class="promo-main">20% Off All Personal Sessions</span>
     <span class="promo-sub">(Content & Business sessions not included. Terms apply.)</span>
-  </div>
+  </a>
 
   <div class="session-types" style="margin-bottom:48px;">
     <a href="personal-pricing.html#family" class="session-type">Families</a>
@@ -227,8 +227,8 @@
   </div>
   <div class="photo-grid">
     <a href="personal-pricing.html#family" style="aspect-ratio:3/2;background:var(--pink);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;text-align:center;text-decoration:none;"><div style="font-size:28px;">🌸</div><div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--black);font-style:italic;">Families</div><div style="font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);">Coming Soon</div><div style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--black);text-decoration:underline;">See Pricing →</div></a>
-    <div style="aspect-ratio:3/2;border-radius:2px;position:relative;overflow:hidden;background:var(--pink);">
-      <img loading="lazy" decoding="async" src="Pyper &amp; Truck Couple Pics-32.JPEG" alt="Couples Session" style="width:100%;height:100%;object-fit:contain;object-position:center;display:block;">
+    <div style="aspect-ratio:4/5;border-radius:2px;position:relative;overflow:hidden;">
+      <img loading="lazy" decoding="async" src="Pyper &amp; Truck Couple Pics-32.JPEG" alt="Couples Session" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
       <a href="couples.html" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.15) 55%,transparent 100%);display:flex;align-items:flex-end;padding:18px;text-decoration:none;">
         <div>
           <div style="font-family:'DM Serif Display',serif;font-size:18px;color:#fff;font-style:italic;">Couples</div>
